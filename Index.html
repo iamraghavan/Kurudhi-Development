@@ -1,0 +1,528 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Developement Stage</title>
+
+    <script src="../cdn-cgi/apps/head/2oc_RD5SS6wgN5SiQnSEnWVNHg8.js"></script>
+    <link
+        href="../css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./vendors/fontawesome-pro-5/css/all.css">
+    <link rel="stylesheet" href="./vendors/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="./vendors/slick/slick.min.css">
+    <link rel="stylesheet" href="./vendors/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" href="./vendors/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="./vendors/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="./vendors/dropzone/css/dropzone.min.css">
+    <link rel="stylesheet" href="./vendors/animate.css">
+    <link rel="stylesheet" href="./vendors/timepicker/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="./vendors/mapbox-gl/mapbox-gl.min.css">
+    <link rel="stylesheet" href="./vendors/dataTables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./css/themes.css">
+    <link rel="icon" href="./images/favicon.ico">
+
+
+</head>
+
+<body>
+
+    <style>
+        .logo-kurudhi {
+            width: 100%;
+            height: 45px;
+        }
+    </style>
+
+    <header
+        class="main-header position-absolute fixed-top m-0 navbar-dark header-sticky header-sticky-smart header-mobile-xl header-02">
+        <div class="sticky-area">
+            <div class="container container-xxl">
+                <nav class="navbar navbar-expand-xl bg-transparent px-0 w-100">
+                    <a class="navbar-brand order-0 order-xl-1 mx-xl-auto" href="index.html">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/kurudhiweb.appspot.com/o/Assets%2Fkurudhi.png?alt=media&token=36c998ed-264c-42f2-84ef-f28e08f7d7dd"
+                            alt="Kurudhi Logo" class="normal-logo logo-kurudhi">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/kurudhiweb.appspot.com/o/Assets%2Fkurudhi.png?alt=media&token=36c998ed-264c-42f2-84ef-f28e08f7d7dd"
+                            alt="kurudhi Logo" class="sticky-logo logo-kurudhi">
+                    </a>
+                    <div class="d-flex d-xl-none order-2">
+                        <!-- <a class="d-block ml-auto mr-4 position-relative text-white p-2" href="#">
+                            <i class="fal fa-heart fs-large-4"></i>
+                            <span class="badge badge-primary badge-circle badge-absolute">1</span>
+                        </a> -->
+                        <button class="navbar-toggler border-0 pr-0" type="button" data-toggle="collapse"
+                            data-target="#primaryMenu03" aria-controls="primaryMenu03" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="text-black-50 fs-24"><i class="fal fa-bars"></i></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse order-3 order-xl-0 mt-3 mt-xl-0 mr-auto flex-grow-0"
+                        id="primaryMenu03">
+                        <ul class="navbar-nav hover-menu main-menu px-0 mx-xl-n4">
+                            <li id="navbar-item-home" aria-haspopup="true" aria-expanded="false"
+                                class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="index.html" data-toggle="dropdown">
+                                    Who we Are ? 
+                                    <span class="caret"></span>
+                                </a>
+                            </li>
+                            <li id="navbar-item-listing" aria-haspopup="true" aria-expanded="false"
+                                class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="./Registration.html" data-toggle="">
+                                    Donor Register
+                                    <span class="caret"></span>
+                                </a>
+                            </li>
+                            <li id="navbar-item-dashboard" aria-haspopup="true" aria-expanded="false"
+                                class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#" data-toggle="dropdown">
+                                    Find Donor
+                                    <span class="caret"></span>
+                                </a>
+                                
+                            </li>
+                            <li id="navbar-item-pages" aria-haspopup="true" aria-expanded="false"
+                                class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#" data-toggle="dropdown">
+                                    Blood Request
+                                    <span class="caret"></span>
+                                </a>
+                               
+                            </li>
+                            <li id="navbar-item-docs" aria-haspopup="true" aria-expanded="false"
+                                class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#" data-toggle="dropdown">
+                                    Invite Friends
+                                    <span class="caret"></span>
+                                </a>
+                               
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ml-auto d-none d-xl-block order-xl-2">
+                        <ul
+                            class="navbar-nav flex-row ml-auto align-items-center justify-content-lg-end flex-wrap py-2">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link mr-md-2 pr-2 pl-0 pl-lg-2" href="" id="bd-versions" data-toggle=""
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span id="clock"></span>
+                                </a>
+
+                            </li>
+                            <li class="divider"></li>
+                            <li class="nav-item ">
+                                <a class="nav-link pl-3 pr-2" data-toggle="modal" href="#login-register-modal">DONOR LOGIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-light btn-lg text-white rounded-lg bg-hover-primary border-hover-primary hover-white d-none d-lg-block"
+                                    href="dashboard-add-new-property.html">
+                                    Donor Registration
+                                    <!-- <img src="images/add-listing-icon.png" alt="Add listing"
+                                        class="ml-1 normal-button-icon"> -->
+                                    <!-- <img src="images/add-listing-icon-primary.png" alt="Add listing"
+                                        class="ml-1 sticky-button-icon"> -->
+                                </a>
+                                <a class="btn btn-primary btn-lg d-block d-lg-none"
+                                    href="dashboard-add-new-property.html">
+                                    Donor Registration
+                                    <!-- <img src="images/add-listing-icon.png" alt="Add listing" class="ml-1"> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="content">
+        <section>
+            <div style="background-image: url('./images/Images/banner-landing-home.png')" class="py-lg-18 py-13 bg-cover">
+                <div class="container mt-lg-9" data-animate="zoomIn">
+                    <p class="mb-5 text-red text-center fs-md-22 fs-18 font-weight-600">Find blood donors near your location and make a blood request in less than 5 minutes.</p>
+                    <h2 class="text-red text-center display-2 font-weight-light mb-10">Join our cause and help us save more lives.
+                    </h2>
+                    <div class="col-md-6 text-md-center">
+                        <a href="listing-grid-with-left-filter.html"
+                            class="btn btn-lg text-white btn-accent rounded-lg mb-8" style="background-color:var(--blood);">Donor Registration
+                            <i class="far fa-long-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-02 pt-10 pb-11">
+            <div class="container container-xxl">
+                <h2 class="text-dark lh-1625 text-center">Why Choose Us?</h2>
+                <span class="heading-divider mx-auto"></span>
+                <div class="row justify-content-between mt-10">
+                    <div class="col-lg-4 mb-6 mb-lg-0" data-animate="fadeInUp">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-img-top d-flex align-items-end justify-content-center">
+                                <img src="images/urban.png" alt="Wider range of properties">
+                            </div>
+                            <div class="card-body px-0 px-xxl-10 pt-7 pb-0 text-center">
+                                <h4 class="card-title fs-18 lh-17 text-dark mb-2">Wider range of properties</h4>
+                                <p class="card-text px-sm-2">
+                                    Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscorem ipsum
+                                    dolor sit ametcipsum suscorein ipsumg elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-6 mb-lg-0" data-animate="fadeInUp">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-img-top d-flex align-items-end justify-content-center">
+                                <img src="images/bank.png" alt="Financing made easy">
+                            </div>
+                            <div class="card-body px-0 px-xxl-10 pt-7 pb-0 text-center">
+                                <h4 class="card-title fs-18 lh-17 text-dark mb-2">Financing made easy</h4>
+                                <p class="card-text px-sm-2">
+                                    Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscorem ipsum
+                                    dolor sit ametcipsum suscorein ipsumg elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-6 mb-lg-0" data-animate="fadeInUp">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-img-top d-flex align-items-end justify-content-center">
+                                <img src="images/buy.png" alt="Transparentcy">
+                            </div>
+                            <div class="card-body px-0 px-xxl-10 pt-7 pb-0 text-center">
+                                <h4 class="card-title fs-18 lh-17 text-dark mb-2">Transparentcy</h4>
+                                <p class="card-text px-sm-2">
+                                    Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscorem ipsum
+                                    dolor sit ametcipsum suscorein ipsumg elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="bg-dark pt-10 pb-8 footer">
+        <div class="container">
+            <ul class="navbar-nav bg-dark flex-row flex-wrap justify-content-center mb-6 pb-1">
+                <li class="nav-item dropdown px-8">
+                    <a class="nav-link dropdown-toggle fs-13 font-weight-500 lh-2 text-white text-uppercase" href="#"
+                        id="real-estate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Real Estate
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="real-estate">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-8">
+                    <a class="nav-link dropdown-toggle fs-13 font-weight-500 lh-2 text-white text-uppercase" href="#"
+                        id="rentals" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Rentals
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="rentals">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-8">
+                    <a class="nav-link dropdown-toggle fs-13 font-weight-500 lh-2 text-white text-uppercase" href="#"
+                        id="mortgage-rates" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mortgage Rates
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="mortgage-rates">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-8">
+                    <a class="nav-link dropdown-toggle fs-13 font-weight-500 lh-2 text-white text-uppercase" href="#"
+                        id="browse-homes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Browse Homes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="browse-homes">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="text-center text-white fs-22 lh-2 font-weight-500 mxw-751 mb-4">
+                Everything you need to know when looking at different types of homes for sale all in one place.
+            </div>
+            <ul class="list-inline text-center mb-5">
+                <li class="list-inline-item mr-8 mb-3">
+                    <a href="#"><img src="images/footer-logo-01.png" alt="Footer Logo 01"> </a>
+                </li>
+                <li class="list-inline-item mr-8 mb-3">
+                    <a href="#"><img src="images/footer-logo-02.png" alt="Footer Logo 02"> </a>
+                </li>
+                <li class="list-inline-item mr-8 mb-3">
+                    <a href="#"><img src="images/footer-logo-03.png" alt="Footer Logo 03"> </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#"><img src="images/footer-logo-04.png" alt="Footer Logo 04"> </a>
+                </li>
+            </ul>
+            <ul class="list-inline text-center mb-6">
+                <li class="list-inline-item mr-3 text-white opacity-7">
+                    © 2020 homeID. All Rights Reserved
+                </li>
+                <li class="list-inline-item divider mr-3"></li>
+                <li class="list-inline-item mr-3">
+                    <a href="tel:(+00)123567990" class="text-white font-weight-bold fs-15">(+00) 123 567990</a>
+                </li>
+                <li class="list-inline-item divider mr-3"></li>
+                <li class="list-inline-item">
+                    <a href="mailto:contact@homeid.com" class="text-white opacity-7 hover-white">contact@homeid.com</a>
+                </li>
+            </ul>
+            <ul class="list-inline text-center mb-2">
+                <li class="list-inline-item mr-0">
+                    <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10"><i
+                            class="fab fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10"><i
+                            class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mr-0">
+                    <a href="#" class="text-white opacity-5 fs-18 px-4 hover-primary opacity-hover-10">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="vendors/jquery.min.js"></script>
+    <script src="vendors/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="vendors/slick/slick.min.js"></script>
+    <script src="vendors/waypoints/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter/countUp.js"></script>
+    <script src="vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendors/chartjs/Chart.min.js"></script>
+    <script src="vendors/dropzone/js/dropzone.min.js"></script>
+    <script src="vendors/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="vendors/hc-sticky/hc-sticky.min.js"></script>
+    <script src="vendors/jparallax/TweenMax.min.js"></script>
+    <script src="vendors/mapbox-gl/mapbox-gl.js"></script>
+    <script src="vendors/dataTables/jquery.dataTables.min.js"></script>
+
+    <script src="js/theme.js"></script>
+    <div class="modal fade login-register login-register-modal" id="login-register-modal" tabindex="-1" role="dialog"
+        aria-labelledby="login-register-modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mxw-571" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0 p-0">
+                    <div class="nav nav-tabs row w-100 no-gutters" id="myTab" role="tablist">
+                        <a class="nav-item col-sm-3 ml-0 nav-link pr-6 py-4 pl-9 active fs-18" id="login-tab"
+                            data-toggle="tab" href="#login" role="tab" aria-controls="login"
+                            aria-selected="true">Login</a>
+                        <a class="nav-item col-sm-3 ml-0 nav-link py-4 px-6 fs-18" id="register-tab" data-toggle="tab"
+                            href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                        <div class="nav-item col-sm-6 ml-0 d-flex align-items-center justify-content-end">
+                            <button type="button" class="close m-0 fs-23" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body p-4 py-sm-7 px-sm-8">
+                    <div class="tab-content shadow-none p-0" id="myTabContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form class="form">
+                                <div class="form-group mb-4">
+                                    <label for="username" class="sr-only">Username</label>
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-prepend ">
+                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18"
+                                                id="inputGroup-sizing-lg">
+                                                <i class="far fa-user"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control border-0 shadow-none fs-13" id="username"
+                                            name="username" required="" placeholder="Username / Your email">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password" class="sr-only">Password</label>
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-prepend ">
+                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
+                                                <i class="far fa-lock"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control border-0 shadow-none fs-13" id="password"
+                                            name="password" required="" placeholder="Password">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                <i class="far fa-eye-slash"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="remember-me"
+                                            name="remember-me">
+                                        <label class="form-check-label" for="remember-me">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="password-recovery.html" class="d-inline-block ml-auto text-orange fs-15">
+                                        Lost password?
+                                    </a>
+                                </div>
+                                <div class="d-flex p-2 border re-capchar align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="verify"
+                                            name="verify">
+                                        <label class="form-check-label" for="verify">
+                                            I'm not a robot
+                                        </label>
+                                    </div>
+                                    <a href="#" class="d-inline-block ml-auto">
+                                        <img src="images/re-captcha.png" alt="Re-capcha">
+                                    </a>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Log in</button>
+                            </form>
+                            <div class="divider text-center my-2">
+                                <span class="px-4 bg-white lh-17 text">
+                                    or continue with
+                                </span>
+                            </div>
+                            <div class="row no-gutters mx-n2">
+                                <div class="col-4 px-2 mb-4">
+                                    <a href="#" class="btn btn-lg btn-block facebook text-white px-0">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-2 mb-4">
+                                    <a href="#" class="btn btn-lg btn-block google px-0">
+                                        <img src="images/google.png" alt="Google">
+                                    </a>
+                                </div>
+                                <div class="col-4 px-2 mb-4">
+                                    <a href="#" class="btn btn-lg btn-block twitter text-white px-0">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <form class="form">
+                                <div class="form-group mb-4">
+                                    <label for="full-name" class="sr-only">Full name</label>
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-prepend ">
+                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
+                                                <i class="far fa-address-card"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control border-0 shadow-none fs-13"
+                                            id="full-name" name="full-name" required="" placeholder="Full name">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="username01" class="sr-only">Username</label>
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-prepend ">
+                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
+                                                <i class="far fa-user"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control border-0 shadow-none fs-13"
+                                            id="username01" name="username01" required=""
+                                            placeholder="Username / Your email">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password01" class="sr-only">Password</label>
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-prepend ">
+                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
+                                                <i class="far fa-lock"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control border-0 shadow-none fs-13"
+                                            id="password01" name="password01" required="" placeholder="Password">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                <i class="far fa-eye-slash"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="form-text">Minimum 8 characters with 1 number and 1 letter</p>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign up</button>
+                            </form>
+                            <div class="divider text-center my-2">
+                                <span class="px-4 bg-white lh-17 text">
+                                    or continue with
+                                </span>
+                            </div>
+                            <div class="row no-gutters mx-n2">
+                                <div class="col-4 px-2 mb-4">
+                                    <a href="#" class="btn btn-lg btn-block facebook text-white px-0">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-2 mb-4">
+                                    <a href="#" class="btn btn-lg btn-block google px-0">
+                                        <img src="images/google.png" alt="Google">
+                                    </a>
+                                </div>
+                                <div class="col-4 px-2 mb-4">
+                                    <a href="#" class="btn btn-lg btn-block twitter text-white px-0">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-2">By creating an account, you agree to HomeID
+                                <a class="text-heading" href="#"><u>Terms of Use</u> </a> and
+                                <a class="text-heading" href="#"><u>Privacy Policy</u></a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed pos-fixed-bottom-right p-6 z-index-10">
+        <a href="#"
+            class="gtf-back-to-top bg-white text-primary hover-white bg-hover-primary shadow p-0 w-52px h-52 rounded-circle fs-20 d-flex align-items-center justify-content-center"
+            title="Back To Top"><i class="fal fa-arrow-up"></i></a>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="./js/theme.js"></script>
+
+    <script>
+        window.setInterval(function () {
+    $('#clock').html(moment().format('lll'))
+}, 1000);
+    </script>
+
+</body>
+
+</html>
