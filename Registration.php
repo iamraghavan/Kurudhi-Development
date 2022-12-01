@@ -118,13 +118,13 @@
                             </li>
                             <li class="divider"></li>
                             <li class="nav-item ">
-                                <a class="nav-link pl-3 pr-2" data-toggle="modal" href="#login-register-modal">DONOR
+                                <a class="nav-link pl-3 pr-2" data-toggle="modal" href="./donors/index.html">DONOR
                                     LOGIN</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="btn btn-outline-light btn-lg text-white rounded-lg bg-hover-primary border-hover-primary hover-white d-none d-lg-block"
-                                    href="dashboard-add-new-property.html">
+                                    href="./donors/index.html">
                                     Donor Registration
                                     <!-- <img src="images/add-listing-icon.png" alt="Add listing"
                                         class="ml-1 normal-button-icon"> -->
@@ -132,7 +132,7 @@
                                         class="ml-1 sticky-button-icon"> -->
                                 </a>
                                 <a class="btn btn-primary btn-lg d-block d-lg-none"
-                                    href="dashboard-add-new-property.html">
+                                    href="./donors/index.html">
                                     Donor Registration
                                     <!-- <img src="images/add-listing-icon.png" alt="Add listing" class="ml-1"> -->
                                 </a>
@@ -658,14 +658,13 @@
 
 <?php
 if(isset($_POST["Submit"])){
-session_start(); 
-include './php/config.php';
+    session_start(); 
+    include './php/config.php';
 
-$login_error_message = '';
-$register_error_message = '';
-$register_success_message = '';
 
-$sql = "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD)
+
+
+    $sql = "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD)
 VALUES (
     '" . $_POST["fullname"] . "'
     ,'" . $_POST["gender"] . "'
@@ -683,9 +682,11 @@ VALUES (
     ,'" . $_POST["vWeightkg"] . "'
     ,'" . $_POST["vDob"] . "'
     ,'" . $_POST["vDOLBD"] . "')";
+    
 
-    
-    
+    $sql = "INSERT INTO tbl_user (username, email, password) VALUES ('" . $_POST["username"] . "','" . $_POST["useremail"] . "','" . $_POST["password"] . "')";
+
+       
 
     if ($conn->query($sql) === TRUE){
         echo "
@@ -702,10 +703,10 @@ VALUES (
           });
           </script>";
       } else {
-        // echo 
-        // "<script type= 'text/javascript'>
-        //     alert('Error: " . $sql . "<br>" . $conn->error."');
-        // </script>";
+        echo 
+        "<script type= 'text/javascript'>
+            alert('Error: " . $sql . "<br>" . $conn->error."');
+        </script>";
       }
   
       $conn->close();
@@ -714,43 +715,6 @@ VALUES (
     }
 
 ?>
-
-<?php
-
-$login_error_message = '';
-$register_error_message = '';
-$register_success_message = '';
-
-// check Register request
-if (!empty($_POST['Submit'])) {
-    // validated user input
-    if ($_POST['username'] == "") {
-        $register_error_message = 'First name field is required!';
-    } else if ($_POST['useremail'] == "") {
-        $register_error_message = 'Email field is required!';
-    } else if ($_POST['password'] == "") {
-        $register_error_message = 'Password field is required!';
-    } else if (!filter_var($_POST['useremail'], FILTER_VALIDATE_EMAIL)) {
-        $register_error_message = 'Invalid email address!';
-    } else if ($app->isEmail($_POST['useremail'])) {
-        $register_error_message = 'Email is already in use!';
-    } else {
-        if ($app->Register($_POST['username'], $_POST['useremail'], $_POST['password'])) {
-            // show success message and ask user to check email for verification link
-            $register_success_message = 'Your account is created successfully, please check your email for verification link to activate your account.';
-        }
-    }
-}
-
-?>
-
-
-
-
-
-
-
-
 
 
   <!-- ----------------------------------------- -->
