@@ -169,13 +169,6 @@
         </section>
 
         <div class="px-3 px-lg-6 px-xxl-13 py-5 py-lg-10 my-profile">
-            <!-- <div class="mb-6">
-                <h2 class="mb-0 text-heading fs-22 lh-15">Add new property
-                </h2>
-                <p class="mb-1">Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit
-                </p>
-            </div> -->
-
             <div class="collapse-tabs new-property-step">
                 <div class="tab-content shadow-none p-0">
                     <div class="page-content">
@@ -184,13 +177,13 @@
                                 <div class="form-left">
                                     <h2>General Information</h2>
                                     <div class="form-row">
-                                        <input type="text" oninput="this.value = this.value.toUpperCase()" name="name"
+                                        <input type="text" oninput="this.value = this.value.toUpperCase()" name="fullname"
                                             inputmode="text" id="id1" class="input-text" placeholder="Full Name"
                                             required>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-row form-row-1">
-                                            <select id="id4" name="genderType">
+                                            <select id="id4" name="gender">
                                                 <option value="#">Select Your Gender</option>
                                                 <option value="MALE">MALE</option>
                                                 <option value="Female">FEMALE</option>
@@ -201,7 +194,7 @@
                                             </span>
                                         </div>
                                         <div class="form-row form-row-2">
-                                            <input type="number" name="age" pattern="[0-9]*" inputmode="numeric"
+                                            <input type="number" name="agevalue" pattern="[0-9]*" inputmode="numeric"
                                                 id="id5" class="company" placeholder="Age" required>
                                         </div>
                                     </div>
@@ -209,19 +202,19 @@
                                     <h2>Contact Information</h2>
 
                                     <div class="form-row">
-                                        <input inputmode="email" name="email" type="email"
+                                        <input inputmode="email" name="mailid" type="email"
                                             pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"
                                             id="id2" class="input-text" placeholder="Email" required>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-row form-row-1">
-                                            <input inputmode="tel" name="contactNumber" type="number" pattern="[0-9]*"
+                                            <input inputmode="tel" name="cNumber" type="number" pattern="[0-9]*"
                                                 inputmode="numeric" id="id6" class="business"
                                                 placeholder="Contact Number" required>
                                         </div>
 
                                         <div class="form-row form-row-2">
-                                            <input inputmode="tel" name="AltcontactNumber" type="number"
+                                            <input inputmode="tel" name="wNumber" type="number"
                                                 pattern="[0-9]*" inputmode="numeric" id="id6" class="business"
                                                 placeholder="Whatsapp Number" required>
                                         </div>
@@ -232,11 +225,11 @@
 
                                     <div class="form-row">
                                         <input oninput="this.value = this.value.toUpperCase()" type="text" id="id7"
-                                            name="address" placeholder="Address" required>
+                                            name="Address" placeholder="Address" required>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-row form-row-1">
-                                            <select name="country" class="countries" id="id8">
+                                            <select name="vCountry" class="countries" id="id8">
                                                 <option oninput="this.value = this.value.toUpperCase()" value="">Select
                                                     Your Country</option>
                                             </select>
@@ -245,7 +238,7 @@
                                             </span> -->
                                         </div>
                                         <div class="form-row form-row-2">
-                                            <select name="state" class="states" id="id9">
+                                            <select name="vState" class="states" id="id9">
                                                 <option oninput="this.value = this.value.toUpperCase()" value="">Select
                                                     Your State</option>
                                             </select>
@@ -254,7 +247,7 @@
                                             </span> -->
                                         </div>
                                         <div class="form-row form-row-2">
-                                            <select name="city" class="cities" id="id10">
+                                            <select name="vCity" class="cities" id="id10">
                                                 <option oninput="this.value = this.value.toUpperCase()" value="">Select
                                                     City</option>
                                             </select>
@@ -267,12 +260,12 @@
 
                                     <div class="form-row">
                                         <input oninput="this.value = this.value.toUpperCase()" type="locations"
-                                            id="id13" name="Area" placeholder="Area / Town / City" required>
+                                            id="id13" name="vArea" placeholder="Area / Town / City" required>
                                     </div>
                                     <h2>Blood Information</h2>
                                     <div class="form-group">
                                         <div class="form-row form-row-1">
-                                            <select id="id3" name="bloodGroupType" required>
+                                            <select id="id3" name="bloodGroup" required>
                                                 <option selected>Select Blood Group</option>
                                                 <option value="A+">A+</option>
                                                 <option value="A-">A-</option>
@@ -299,7 +292,7 @@
                                         </div>
 
                                         <div class="form-row form-row-2">
-                                            <select name="statusCheck" id="id14">
+                                            <select name="isAvailable" id="id14">
                                                 <option value="#">Please confirm your availability to donate blood
                                                 </option>
                                                 <option value="AVAILABLE">AVAILABLE</option>
@@ -313,14 +306,14 @@
                                     <div class="form-group">
                                         
                                         <div class="form-row form-row-1">
-                                            <input inputmode="tel" name="contactNumber" type="number" pattern="[0-9]*"
+                                            <input name="vWeightkg" type="text" pattern="[0-9]*"
                                                 inputmode="numeric" id="id6" class="business"
                                                 placeholder="Weight (in Kg.)" required>
                                         </div>
 
                                         <div class="form-row form-row-2">
-                                            <input inputmode="tel" name="AltcontactNumber" type="text"
-                                                pattern="[0-9]*" inputmode="numeric" id="fooDate" class="business"
+                                            <input name="vDob" type="text"
+                                                id="fooDate" class="business"
                                                 placeholder="Date of Birth  - (DD/MM/YYYY)" required>
                                         </div>
                                     </div>
@@ -328,8 +321,8 @@
                                     
                                         <div class="form-row">
                                             
-                                            <input inputmode="tel" name="" type="text"
-                                            pattern="[0-9]*" inputmode="numeric" id="fooDate2" class="business"
+                                            <input name="vDOLBD" type="text"
+                                            id="fooDate2" class="business"
                                             placeholder="Late Date of Donation (Optional)  - (DD/MM/YYYY)">
                                         </div>
 
@@ -361,122 +354,40 @@
                                     
 
 
-                                    <h2>Profile Sign in <span>*</span></h2>
-
+                                    <h2>Profile Sign in <span>*</span> <span style="display: inline-block; font-size: 14px;"><div id="status"></div></span></h2>
+                          
                                     <div class="field email-field">
-                                        <div class="form-row email-field">
-                                            <input type="text" name="username_email" inputmode="email" id="id1"
-                                                class="input-text email" placeholder="Email" required>
-                                        </div>
-
-
+                                    
+                                    
                                         <div class="form-group">
-
                                             <div class="form-row form-row-1">
-                                                <input type="text" name="password create-password " inputmode="password"
-                                                    id="psw" class="input-text password" placeholder="Enter Password"
-                                                    required>
-                                                <span class="error password-error">
-                                                    <i class="bx bx-error-circle error-icon"></i>
-                                                    <p class="error-text">
-                                                        Please enter atleast 8 charatcer with number, symbol, small and
-                                                        capital letter.
-                                                    </p>
-                                                </span>
+                                                <input type="text" name="useremail" inputmode="email" id="id1" class="input-text email"
+                                                    placeholder="Email" required>
+                                            </div>
+                                    
+                                            <div class="form-row form-row-2">
+                                                <input type="text" name="username" inputmode="text" id="username" class="input-text" placeholder="@ username" required>
+                                            </div>
+                                    
+                                        </div>
+                                    
+                                    
+                                        <div class="form-group">
+                                    
+                                            <div class="form-row form-row-1">
+                                                <input type="text" name="password" inputmode="password" id="psw"
+                                                    class="input-text password" placeholder="Enter Password" required>
+                                    
                                             </div>
                                             <div class="form-row form-row-2 confirm-password cPassword">
-                                                <input type="text" name="password" inputmode="password" id="psw"
-                                                    class="input-text" placeholder="Enter Confirm Password" required>
-                                                <span class="error cPassword-error">
-                                                    <i class="bx bx-error-circle error-icon"></i>
-                                                    <p class="error-text">Password don't match</p>
-                                                </span>
+                                                <input type="text" name="re_password" inputmode="password" id="psw" class="input-text"
+                                                    placeholder="Enter Confirm Password" required>
+                                    
                                             </div>
-
+                                    
                                         </div>
-
+                                    
                                     </div>
-
-                                    <style>
-                                        form .field {
-                                            margin-bottom: 20px;
-                                        }
-
-                                        form .input-field {
-                                            position: relative;
-                                            height: 55px;
-                                            width: 100%;
-                                        }
-
-                                        .input-field input {
-                                            height: 100%;
-                                            width: 100%;
-                                            outline: none;
-                                            border: none;
-                                            border-radius: 8px;
-                                            padding: 0 15px;
-                                            border: 1px solid #d1d1d1;
-                                        }
-
-                                        .invalid input {
-                                            border-color: #d93025;
-                                        }
-
-                                        .input-field .show-hide {
-                                            position: absolute;
-                                            right: 13px;
-                                            top: 50%;
-                                            transform: translateY(-50%);
-                                            font-size: 18px;
-                                            color: #919191;
-                                            cursor: pointer;
-                                            padding: 3px;
-                                        }
-
-                                        .field .error {
-                                            display: flex;
-                                            align-items: center;
-                                            margin-top: 6px;
-                                            color: #d93025;
-                                            font-size: 13px;
-                                            display: none;
-                                        }
-
-                                        .invalid .error {
-                                            display: flex;
-                                        }
-
-                                        .error .error-icon {
-                                            margin-right: 6px;
-                                            font-size: 15px;
-                                        }
-
-                                        .create-password .error {
-                                            align-items: flex-start;
-                                        }
-
-                                        .create-password .error-icon {
-                                            margin-top: 4px;
-                                        }
-
-                                        .button {
-                                            margin: 25px 0 6px;
-                                        }
-
-                                        .button input {
-                                            color: #fff;
-                                            font-size: 16px;
-                                            font-weight: 400;
-                                            background-color: #4070f4;
-                                            cursor: pointer;
-                                            transition: all 0.3s ease;
-                                        }
-
-                                        .button input:hover {
-                                            background-color: #0e4bf1;
-                                        }
-                                    </style>
-
 
 
                                     <div class="form-right">
@@ -494,8 +405,8 @@
 
                                     <div class="col-12 d-flex justify-content-center">
                                         <button class="btn btn-lg bg-btn-submit mr-4 mb-4 hover-success"
-                                            id="submit_button" disabled onclick="check()" type="submit"
-                                            value=" Submit Now " name="submit" sendMessage()>Submit</button>
+                                        id="submit_button" disabled onclick="check()"
+                                        type="submit" name="Submit" value="Submit" sendMessage()>Submit</button>
 
 
 
@@ -673,200 +584,22 @@
         </div>
     </footer>
 
-    <script src="vendors/jquery.min.js"></script>
-    <script src="vendors/jquery-ui/jquery-ui.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
-    <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="vendors/slick/slick.min.js"></script>
-    <script src="vendors/waypoints/jquery.waypoints.min.js"></script>
-    <script src="vendors/counter/countUp.js"></script>
-    <script src="vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="vendors/chartjs/Chart.min.js"></script>
-    <script src="vendors/dropzone/js/dropzone.min.js"></script>
-    <script src="vendors/timepicker/bootstrap-timepicker.min.js"></script>
-    <script src="vendors/hc-sticky/hc-sticky.min.js"></script>
-    <script src="vendors/jparallax/TweenMax.min.js"></script>
-    <script src="vendors/mapbox-gl/mapbox-gl.js"></script>
-    <script src="vendors/dataTables/jquery.dataTables.min.js"></script>
-
+    <script src="./vendors/jquery.min.js"></script>
+    <script src="./vendors/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="./vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./vendors/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./vendors/counter/countUp.js"></script>
+    <script src="./vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="./vendors/chartjs/Chart.min.js"></script>
+    <script src="./vendors/dropzone/js/dropzone.min.js"></script>
+    <script src="./vendors/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./vendors/hc-sticky/hc-sticky.min.js"></script>
+    <script src="./vendors/jparallax/TweenMax.min.js"></script>
+    <script src="./vendors/mapbox-gl/mapbox-gl.js"></script>
+    <script src="./vendors/dataTables/jquery.dataTables.min.js"></script>
     <script src="js/theme.js"></script>
-    <div class="modal fade login-register login-register-modal" id="login-register-modal" tabindex="-1" role="dialog"
-        aria-labelledby="login-register-modal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered mxw-571" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0 p-0">
-                    <div class="nav nav-tabs row w-100 no-gutters" id="myTab" role="tablist">
-                        <a class="nav-item col-sm-3 ml-0 nav-link pr-6 py-4 pl-9 active fs-18" id="login-tab"
-                            data-toggle="tab" href="#login" role="tab" aria-controls="login"
-                            aria-selected="true">Login</a>
-                        <a class="nav-item col-sm-3 ml-0 nav-link py-4 px-6 fs-18" id="register-tab" data-toggle="tab"
-                            href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
-                        <div class="nav-item col-sm-6 ml-0 d-flex align-items-center justify-content-end">
-                            <button type="button" class="close m-0 fs-23" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body p-4 py-sm-7 px-sm-8">
-                    <div class="tab-content shadow-none p-0" id="myTabContent">
-                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                            <form class="form">
-                                <div class="form-group mb-4">
-                                    <label for="username" class="sr-only">Username</label>
-                                    <div class="input-group input-group-lg">
-                                        <div class="input-group-prepend ">
-                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18"
-                                                id="inputGroup-sizing-lg">
-                                                <i class="far fa-user"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control border-0 shadow-none fs-13" id="username"
-                                            name="username" required="" placeholder="Username / Your email">
-                                    </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="password" class="sr-only">Password</label>
-                                    <div class="input-group input-group-lg">
-                                        <div class="input-group-prepend ">
-                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
-                                                <i class="far fa-lock"></i>
-                                            </span>
-                                        </div>
-                                        <input type="text" class="form-control border-0 shadow-none fs-13" id="password"
-                                            name="password" required="" placeholder="Password">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
-                                                <i class="far fa-eye-slash"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="remember-me"
-                                            name="remember-me">
-                                        <label class="form-check-label" for="remember-me">
-                                            Remember me
-                                        </label>
-                                    </div>
-                                    <a href="password-recovery.html" class="d-inline-block ml-auto text-orange fs-15">
-                                        Lost password?
-                                    </a>
-                                </div>
-                                <div class="d-flex p-2 border re-capchar align-items-center mb-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="verify"
-                                            name="verify">
-                                        <label class="form-check-label" for="verify">
-                                            I'm not a robot
-                                        </label>
-                                    </div>
-                                    <a href="#" class="d-inline-block ml-auto">
-                                        <img src="images/re-captcha.png" alt="Re-capcha">
-                                    </a>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Log in</button>
-                            </form>
-                            <div class="divider text-center my-2">
-                                <span class="px-4 bg-white lh-17 text">
-                                    or continue with
-                                </span>
-                            </div>
-                            <div class="row no-gutters mx-n2">
-                                <div class="col-4 px-2 mb-4">
-                                    <a href="#" class="btn btn-lg btn-block facebook text-white px-0">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </div>
-                                <div class="col-4 px-2 mb-4">
-                                    <a href="#" class="btn btn-lg btn-block google px-0">
-                                        <img src="images/google.png" alt="Google">
-                                    </a>
-                                </div>
-                                <div class="col-4 px-2 mb-4">
-                                    <a href="#" class="btn btn-lg btn-block twitter text-white px-0">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                            <form class="form">
-                                <div class="form-group mb-4">
-                                    <label for="full-name" class="sr-only">Full name</label>
-                                    <div class="input-group input-group-lg">
-                                        <div class="input-group-prepend ">
-                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
-                                                <i class="far fa-address-card"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control border-0 shadow-none fs-13"
-                                            id="full-name" name="full-name" required="" placeholder="Full name">
-                                    </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="username01" class="sr-only">Username</label>
-                                    <div class="input-group input-group-lg">
-                                        <div class="input-group-prepend ">
-                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
-                                                <i class="far fa-user"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control border-0 shadow-none fs-13"
-                                            id="username01" name="username01" required=""
-                                            placeholder="Username / Your email">
-                                    </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="password01" class="sr-only">Password</label>
-                                    <div class="input-group input-group-lg">
-                                        <div class="input-group-prepend ">
-                                            <span class="input-group-text bg-gray-01 border-0 text-muted fs-18">
-                                                <i class="far fa-lock"></i>
-                                            </span>
-                                        </div>
-                                        <input type="text" class="form-control border-0 shadow-none fs-13"
-                                            id="password01" name="password01" required="" placeholder="Password">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
-                                                <i class="far fa-eye-slash"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <p class="form-text">Minimum 8 characters with 1 number and 1 letter</p>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign up</button>
-                            </form>
-                            <div class="divider text-center my-2">
-                                <span class="px-4 bg-white lh-17 text">
-                                    or continue with
-                                </span>
-                            </div>
-                            <div class="row no-gutters mx-n2">
-                                <div class="col-4 px-2 mb-4">
-                                    <a href="#" class="btn btn-lg btn-block facebook text-white px-0">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </div>
-                                <div class="col-4 px-2 mb-4">
-                                    <a href="#" class="btn btn-lg btn-block google px-0">
-                                        <img src="images/google.png" alt="Google">
-                                    </a>
-                                </div>
-                                <div class="col-4 px-2 mb-4">
-                                    <a href="#" class="btn btn-lg btn-block twitter text-white px-0">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="mt-2">By creating an account, you agree to HomeID
-                                <a class="text-heading" href="#"><u>Terms of Use</u> </a> and
-                                <a class="text-heading" href="#"><u>Privacy Policy</u></a>.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="position-fixed pos-fixed-bottom-right p-6 z-index-10">
         <a href="#"
             class="gtf-back-to-top bg-white text-primary hover-white bg-hover-primary shadow p-0 w-52px h-52 rounded-circle fs-20 d-flex align-items-center justify-content-center"
@@ -877,17 +610,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="./js/theme.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://demos.phplift.net/country-state-and-city-dropdown-jquery/js/countrystatecity.js?v3"></script>
-
     <script src="./js/password_validation.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <script>
         window.setInterval(function () {
             $('#clock').html(moment().format('lll'))
         }, 1000);
     </script>
+
+    <!-- jQuery file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Custom JS file -->
+<script src="./js/isAvailable.js"></script>
+
 
 <script>
     function terms_changed(termsCheckBox) {
@@ -910,7 +647,7 @@
       else {
         swal({
           title: "Sorry Voluntary Donor ",
-          text: `You are not eligible for Donate Blood ! ${ages} `,
+          text: `You are not eligible for Donate Blood ! ${nbr} `,
           icon: "success",
           button: "Aww yiss!"
         });
@@ -919,17 +656,104 @@
 
   </script>
 
+<?php
+if(isset($_POST["Submit"])){
+session_start(); 
+include './php/config.php';
+
+$login_error_message = '';
+$register_error_message = '';
+$register_success_message = '';
+
+$sql = "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD)
+VALUES (
+    '" . $_POST["fullname"] . "'
+    ,'" . $_POST["gender"] . "'
+    ,'" . $_POST["agevalue"] . "'
+    ,'" . $_POST["mailid"] . "'
+    ,'" . $_POST["cNumber"] . "'
+    ,'" . $_POST["wNumber"] . "'
+    ,'" . $_POST["Address"] . "'
+    ,'" . $_POST["vCountry"] . "'
+    ,'" . $_POST["vState"] . "'
+    ,'" . $_POST["vCity"] . "'
+    ,'" . $_POST["vArea"] . "'
+    ,'" . $_POST["bloodGroup"] . "'
+    ,'" . $_POST["isAvailable"] . "'
+    ,'" . $_POST["vWeightkg"] . "'
+    ,'" . $_POST["vDob"] . "'
+    ,'" . $_POST["vDOLBD"] . "')";
+
+    
+    
+
+    if ($conn->query($sql) === TRUE){
+        echo "
+          <script>
+          sweetAlert({
+                title:'Good job!!',
+                  text: 'Dear! Donar Your Record Will Be Submit By Sucessfully',
+                  type:'success'
+          },function(isConfirm){
+                alert('ok');
+          });
+          $('.swal2-confirm').click(function(){
+                window.location.href = 'index.html';
+          });
+          </script>";
+      } else {
+        // echo 
+        // "<script type= 'text/javascript'>
+        //     alert('Error: " . $sql . "<br>" . $conn->error."');
+        // </script>";
+      }
+  
+      $conn->close();
+    } else {
+      $_SESSION['form_submit'] = 'NULL';
+    }
+
+?>
+
+<?php
+
+$login_error_message = '';
+$register_error_message = '';
+$register_success_message = '';
+
+// check Register request
+if (!empty($_POST['Submit'])) {
+    // validated user input
+    if ($_POST['username'] == "") {
+        $register_error_message = 'First name field is required!';
+    } else if ($_POST['useremail'] == "") {
+        $register_error_message = 'Email field is required!';
+    } else if ($_POST['password'] == "") {
+        $register_error_message = 'Password field is required!';
+    } else if (!filter_var($_POST['useremail'], FILTER_VALIDATE_EMAIL)) {
+        $register_error_message = 'Invalid email address!';
+    } else if ($app->isEmail($_POST['useremail'])) {
+        $register_error_message = 'Email is already in use!';
+    } else {
+        if ($app->Register($_POST['username'], $_POST['useremail'], $_POST['password'])) {
+            // show success message and ask user to check email for verification link
+            $register_success_message = 'Your account is created successfully, please check your email for verification link to activate your account.';
+        }
+    }
+}
+
+?>
+
+
+
+
+
+
+
 
 
 
   <!-- ----------------------------------------- -->
-
-
-  
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://demos.phplift.net/country-state-and-city-dropdown-jquery/js/countrystatecity.js?v3"></script>
-
 </body>
 
 </html>

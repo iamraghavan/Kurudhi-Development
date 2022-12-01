@@ -71,7 +71,7 @@
                             </li>
                             <li id="navbar-item-listing" aria-haspopup="true" aria-expanded="false"
                                 class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="./Registration.html" data-toggle="">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="./" data-toggle="">
                                     Donor Register
                                     <span class="caret"></span>
                                 </a>
@@ -522,6 +522,22 @@
     $('#clock').html(moment().format('lll'))
 }, 1000);
     </script>
+
+
+<script>
+    // Initialize the agent at application startup.
+    const fpPromise = import('https://fpjscdn.net/v3/uWrGTIhNP522aY1lGglh')
+      .then(FingerprintJS => FingerprintJS.load())
+
+    // Get the visitor identifier when you need it.
+    fpPromise
+      .then(fp => fp.get())
+      .then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId
+        console.log(visitorId)
+      })
+  </script>
 
 </body>
 
