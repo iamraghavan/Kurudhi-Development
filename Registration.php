@@ -660,36 +660,29 @@
 if(isset($_POST["Submit"])){
     session_start(); 
     include './php/config.php';
+    $sql1 = "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD)
+    VALUES (
+        '" . $_POST["fullname"] . "'
+        ,'" . $_POST["gender"] . "'
+        ,'" . $_POST["agevalue"] . "'
+        ,'" . $_POST["mailid"] . "'
+        ,'" . $_POST["cNumber"] . "'
+        ,'" . $_POST["wNumber"] . "'
+        ,'" . $_POST["Address"] . "'
+        ,'" . $_POST["vCountry"] . "'
+        ,'" . $_POST["vState"] . "'
+        ,'" . $_POST["vCity"] . "'
+        ,'" . $_POST["vArea"] . "'
+        ,'" . $_POST["bloodGroup"] . "'
+        ,'" . $_POST["isAvailable"] . "'
+        ,'" . $_POST["vWeightkg"] . "'
+        ,'" . $_POST["vDob"] . "'
+        ,'" . $_POST["vDOLBD"] . "')";
 
-
-
-
-    $sql = "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD)
-VALUES (
-    '" . $_POST["fullname"] . "'
-    ,'" . $_POST["gender"] . "'
-    ,'" . $_POST["agevalue"] . "'
-    ,'" . $_POST["mailid"] . "'
-    ,'" . $_POST["cNumber"] . "'
-    ,'" . $_POST["wNumber"] . "'
-    ,'" . $_POST["Address"] . "'
-    ,'" . $_POST["vCountry"] . "'
-    ,'" . $_POST["vState"] . "'
-    ,'" . $_POST["vCity"] . "'
-    ,'" . $_POST["vArea"] . "'
-    ,'" . $_POST["bloodGroup"] . "'
-    ,'" . $_POST["isAvailable"] . "'
-    ,'" . $_POST["vWeightkg"] . "'
-    ,'" . $_POST["vDob"] . "'
-    ,'" . $_POST["vDOLBD"] . "')";
-    
-
-    $sql = "INSERT INTO tbl_user (username, email, password) VALUES ('" . $_POST["username"] . "','" . $_POST["useremail"] . "','" . $_POST["password"] . "')";
-
-    // Commit Git
+        $sql2 = "INSERT INTO tbl_user (username, email, password) VALUES ('" . $_POST["username"] . "','" . $_POST["useremail"] . "','" . $_POST["password"] . "')";
        
 
-    if ($conn->query($sql) === TRUE){
+    if (($conn->query($sql1) === TRUE && $conn->query($sql2)  === TRUE)){
         echo "
           <script>
           sweetAlert({
@@ -706,7 +699,7 @@ VALUES (
       } else {
         echo 
         "<script type= 'text/javascript'>
-            alert('Error: " . $sql . "<br>" . $conn->error."');
+            alert('Error: " . $sql1 . "<br>" . $conn->error."');
         </script>";
       }
   
@@ -714,6 +707,34 @@ VALUES (
     } else {
       $_SESSION['form_submit'] = 'NULL';
     }
+
+    require_once './vendor/autoload.php';
+    require_once './credential.php';
+
+// Create the Transport
+$transport = (new Swift_SmtpTransport('smtp.gmail.com', 587, 'tls'))
+  ->setUsername(EMAIL)
+  ->setPassword(PASS)
+;
+
+// Create the Mailer using your created Transport
+$mailer = new Swift_Mailer($transport);
+
+// Create a message
+$message = (new Swift_Message('Welcome Raghavan'))
+  ->setFrom([EMAIL => 'John Doe'])
+  ->setTo([$_POST['useremail']])
+  ->setBody('Testing Mail')
+  ;
+
+// Send the message
+if($mailer->send($message)){
+    echo'Mail Send Sucessfully';
+}else{
+    echo'
+    mail not send !
+    ';
+}
 
 ?>
 
