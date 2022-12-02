@@ -686,6 +686,7 @@ VALUES (
 
     $sql = "INSERT INTO tbl_user (username, email, password) VALUES ('" . $_POST["username"] . "','" . $_POST["useremail"] . "','" . $_POST["password"] . "')";
 
+    // Commit Git
        
 
     if ($conn->query($sql) === TRUE){
