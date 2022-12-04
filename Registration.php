@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Developement Stage</title>
 
-    <script src="../cdn-cgi/apps/head/2oc_RD5SS6wgN5SiQnSEnWVNHg8.js"></script>
+    <!-- <script src="../cdn-cgi/apps/head/2oc_RD5SS6wgN5SiQnSEnWVNHg8.js"></script>
     <link
         href="../css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
 
     <link rel="stylesheet" href="./vendors/fontawesome-pro-5/css/all.css">
     <link rel="stylesheet" href="./vendors/bootstrap-select/css/bootstrap-select.min.css">
@@ -131,8 +131,7 @@
                                     <!-- <img src="images/add-listing-icon-primary.png" alt="Add listing"
                                         class="ml-1 sticky-button-icon"> -->
                                 </a>
-                                <a class="btn btn-primary btn-lg d-block d-lg-none"
-                                    href="./donors/index.html">
+                                <a class="btn btn-primary btn-lg d-block d-lg-none" href="./donors/index.html">
                                     Donor Registration
                                     <!-- <img src="images/add-listing-icon.png" alt="Add listing" class="ml-1"> -->
                                 </a>
@@ -177,9 +176,9 @@
                                 <div class="form-left">
                                     <h2>General Information</h2>
                                     <div class="form-row">
-                                        <input type="text" oninput="this.value = this.value.toUpperCase()" name="fullname"
-                                            inputmode="text" id="id1" class="input-text" placeholder="Full Name"
-                                            required>
+                                        <input type="text" oninput="this.value = this.value.toUpperCase()"
+                                            name="fullname" inputmode="text" id="id1" class="input-text"
+                                            placeholder="Full Name" required>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-row form-row-1">
@@ -204,7 +203,7 @@
                                     <div class="form-row">
                                         <input inputmode="email" name="mailid" type="email"
                                             pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"
-                                            id="id2" class="input-text" placeholder="Email" required>
+                                            id="email_input" class="input-text" placeholder="Email" required>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-row form-row-1">
@@ -214,8 +213,8 @@
                                         </div>
 
                                         <div class="form-row form-row-2">
-                                            <input inputmode="tel" name="wNumber" type="number"
-                                                pattern="[0-9]*" inputmode="numeric" id="id6" class="business"
+                                            <input inputmode="tel" name="wNumber" type="number" pattern="[0-9]*"
+                                                inputmode="numeric" id="id6" class="business"
                                                 placeholder="Whatsapp Number" required>
                                         </div>
                                     </div>
@@ -257,11 +256,19 @@
                                         </div>
 
                                     </div>
-
-                                    <div class="form-row">
-                                        <input oninput="this.value = this.value.toUpperCase()" type="locations"
-                                            id="id13" name="vArea" placeholder="Area / Town / City" required>
+                                    <div class="form-group">
+                                        <div class="form-row form-row-1">
+                                            <input oninput="this.value = this.value.toUpperCase()" type="locations"
+                                                id="id13" name="vArea" placeholder="Area / Town / City" required>
+                                        </div>
+                                        <div class="form-row form-row-2">
+                                            <input inputmode="tel" type="number" id="id13" name="vPincode"
+                                                pattern="[0-9]*" inputmode="numeric" placeholder="Enter Postal Code"
+                                                required>
+                                        </div>
                                     </div>
+
+
                                     <h2>Blood Information</h2>
                                     <div class="form-group">
                                         <div class="form-row form-row-1">
@@ -293,7 +300,7 @@
 
                                         <div class="form-row form-row-2">
                                             <select name="isAvailable" id="id14">
-                                                <option value="#">Please confirm your availability to donate blood
+                                                <option value="#">Please confirm your Availability
                                                 </option>
                                                 <option value="AVAILABLE">AVAILABLE</option>
                                                 <option value="UNAVAILABLE">UN-AVAILABLE</option>
@@ -304,89 +311,92 @@
 
                                     </div>
                                     <div class="form-group">
-                                        
+
                                         <div class="form-row form-row-1">
-                                            <input name="vWeightkg" type="text" pattern="[0-9]*"
-                                                inputmode="numeric" id="id6" class="business"
-                                                placeholder="Weight (in Kg.)" required>
+                                            <input name="vWeightkg" type="text" pattern="[0-9]*" inputmode="numeric"
+                                                id="id6" class="business" placeholder="Weight (in Kg.)" required>
                                         </div>
 
                                         <div class="form-row form-row-2">
-                                            <input name="vDob" type="text"
-                                                id="fooDate" class="business"
+                                            <input name="vDob" type="text" id="fooDate" class="business"
                                                 placeholder="Date of Birth  - (DD/MM/YYYY)" required>
                                         </div>
                                     </div>
                                     <!-- <p class="ptag">Date of Last Blood Donate <span class="text-muted">(Optional)</span></p> -->
-                                    
-                                        <div class="form-row">
-                                            
-                                            <input name="vDOLBD" type="text"
-                                            id="fooDate2" class="business"
+
+                                    <div class="form-row">
+
+                                        <input name="vDOLBD" type="text" id="fooDate2" class="business"
                                             placeholder="Late Date of Donation (Optional)  - (DD/MM/YYYY)">
-                                        </div>
+                                    </div>
 
-                                        <script>
-                                            var dateField = document.getElementById("fooDate");
-                                            dateField.onkeyup = bar;
-                                            function bar(evt) {
-                                                var v = this.value;
-                                                if (v.match(/^\d{2}$/) !== null) {
-                                                    this.value = v + '/';
-                                                } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
-                                                    this.value = v + '/';
-                                                }
-
+                                    <script>
+                                        var dateField = document.getElementById("fooDate");
+                                        dateField.onkeyup = bar;
+                                        function bar(evt) {
+                                            var v = this.value;
+                                            if (v.match(/^\d{2}$/) !== null) {
+                                                this.value = v + '/';
+                                            } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                                                this.value = v + '/';
                                             }
-                                            var dateField = document.getElementById("fooDate2");
-                                            dateField.onkeyup = bar;
-                                            function bar(evt) {
-                                                var v = this.value;
-                                                if (v.match(/^\d{2}$/) !== null) {
-                                                    this.value = v + '/';
-                                                } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
-                                                    this.value = v + '/';
-                                                }
 
+                                        }
+                                        var dateField = document.getElementById("fooDate2");
+                                        dateField.onkeyup = bar;
+                                        function bar(evt) {
+                                            var v = this.value;
+                                            if (v.match(/^\d{2}$/) !== null) {
+                                                this.value = v + '/';
+                                            } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                                                this.value = v + '/';
                                             }
-                                        </script>
-                                   
-                                    
+
+                                        }
+                                    </script>
 
 
-                                    <h2>Profile Sign in <span>*</span> <span style="display: inline-block; font-size: 14px;"><div id="status"></div></span></h2>
-                          
+
+
+                                    <h2>Profile Sign in <span>*</span> <span
+                                            style="display: inline-block; font-size: 14px;">
+                                            <div id="status"></div>
+                                        </span></h2>
+
                                     <div class="field email-field">
-                                    
-                                    
+
+
                                         <div class="form-group">
                                             <div class="form-row form-row-1">
-                                                <input type="text" name="useremail" inputmode="email" id="id1" class="input-text email"
-                                                    placeholder="Email" required>
+
+                                                <input type="text" name="useremail" inputmode="email" id="id1"
+                                                    class="input-text email" placeholder="Email" required>
                                             </div>
-                                    
+
                                             <div class="form-row form-row-2">
-                                                <input type="text" name="username" inputmode="text" id="username" class="input-text" placeholder="@ username" required>
+
+                                                <input type="text" name="username" inputmode="text" id="username"
+                                                    class="input-text" placeholder="@ username" required>
                                             </div>
-                                    
+
                                         </div>
-                                    
-                                    
+
+
                                         <div class="form-group">
-                                    
+
                                             <div class="form-row form-row-1">
                                                 <input type="text" name="password" inputmode="password" id="psw"
                                                     class="input-text password" placeholder="Enter Password" required>
-                                    
+
                                             </div>
                                             <div class="form-row form-row-2 confirm-password cPassword">
-                                                <input type="text" name="re_password" inputmode="password" id="psw" class="input-text"
-                                                    placeholder="Enter Confirm Password" required>
-                                    
+                                                <input type="text" name="re_password" inputmode="password" id="psw"
+                                                    class="input-text" placeholder="Enter Confirm Password" required>
+
                                             </div>
-                                    
+
                                         </div>
-                                    
+
                                     </div>
 
 
@@ -405,8 +415,8 @@
 
                                     <div class="col-12 d-flex justify-content-center">
                                         <button class="btn btn-lg bg-btn-submit mr-4 mb-4 hover-success"
-                                        id="submit_button" disabled onclick="check()"
-                                        type="submit" name="Submit" value="Submit" sendMessage()>Submit</button>
+                                            id="submit_button" disabled onclick="check()" type="submit" name="Submit"
+                                            value="Submit" sendMessage()>Submit</button>
 
 
 
@@ -612,7 +622,6 @@
     <script src="./js/theme.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://demos.phplift.net/country-state-and-city-dropdown-jquery/js/countrystatecity.js?v3"></script>
-    <script src="./js/password_validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <script>
         window.setInterval(function () {
@@ -623,67 +632,140 @@
     <!-- jQuery file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Custom JS file -->
-<script src="./js/isAvailable.js"></script>
+    <script src="./js/isAvailable.js"></script>
 
 
-<script>
-    function terms_changed(termsCheckBox) {
-      if (termsCheckBox.checked) {
-        document.getElementById("submit_button").disabled = false;
-      } else {
-        document.getElementById("submit_button").disabled = true;
-      }
-    }
+    <script src="./js/isMain.js"></script>
 
-    // Age Checking above 60+
+    <style>
+        .swal-footer {
+            background-color: rgb(245, 248, 250);
+            margin-top: 32px;
+            border-top: 1px solid #E9EEF1;
+            overflow: hidden;
+        }
+    </style>
 
-    var ages = document.getElementById("id5");
-    function check() {
-      var nbr;
-      nbr = Number(document.getElementById("id5").value);
-      if (nbr > 60 || nbr > 18) {
-        // swal("You are not an adult");
-      }
-      else {
-        swal({
-          title: "Sorry Voluntary Donor ",
-          text: `You are not eligible for Donate Blood ! ${nbr} `,
-          icon: "success",
-          button: "Aww yiss!"
-        });
-      }
-    }
+    <?php if (isset($_POST['Submit'])) {
+        $cpass = $_POST['re_password'];
+        $pass = $_POST['password'];
 
-  </script>
+        $email = $_POST['mailid'];
+        $login_email = $_POST['useremail'];
 
-<?php
-if(isset($_POST["Submit"])){
-    session_start(); 
-    include './php/config.php';
-    $sql1 = "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD)
+        if ($pass != $cpass) {
+            echo "<script> sweetAlert({
+        title:'Oops!!',
+          text: 'Please Enter Correct Password',
+          type:'error'
+             });
+             </script>";
+        } else {
+            echo "<script>console.log('Password Correct');</script>";
+        }
+
+        if ($login_email != $email) {
+            echo "<script> sweetAlert({
+                title:'Oops!!',
+                  text: 'Please Enter Correct Email ',
+                  type:'error'
+                     }); </script>";
+        } else {
+            include './php/config.php';
+            $sql1 =
+                "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD, Pincode)
     VALUES (
-        '" . $_POST["fullname"] . "'
-        ,'" . $_POST["gender"] . "'
-        ,'" . $_POST["agevalue"] . "'
-        ,'" . $_POST["mailid"] . "'
-        ,'" . $_POST["cNumber"] . "'
-        ,'" . $_POST["wNumber"] . "'
-        ,'" . $_POST["Address"] . "'
-        ,'" . $_POST["vCountry"] . "'
-        ,'" . $_POST["vState"] . "'
-        ,'" . $_POST["vCity"] . "'
-        ,'" . $_POST["vArea"] . "'
-        ,'" . $_POST["bloodGroup"] . "'
-        ,'" . $_POST["isAvailable"] . "'
-        ,'" . $_POST["vWeightkg"] . "'
-        ,'" . $_POST["vDob"] . "'
-        ,'" . $_POST["vDOLBD"] . "')";
+        '" .
+                $_POST['fullname'] .
+                "'
+        ,'" .
+                $_POST['gender'] .
+                "'
+        ,'" .
+                $_POST['agevalue'] .
+                "'
+        ,'" .
+                $_POST['mailid'] .
+                "'
+        ,'" .
+                $_POST['cNumber'] .
+                "'
+        ,'" .
+                $_POST['wNumber'] .
+                "'
+        ,'" .
+                $_POST['Address'] .
+                "'
+        ,'" .
+                $_POST['vCountry'] .
+                "'
+        ,'" .
+                $_POST['vState'] .
+                "'
+        ,'" .
+                $_POST['vCity'] .
+                "'
+        ,'" .
+                $_POST['vArea'] .
+                "'
+        ,'" .
+                $_POST['bloodGroup'] .
+                "'
+        ,'" .
+                $_POST['isAvailable'] .
+                "'
+        ,'" .
+                $_POST['vWeightkg'] .
+                "'
+        ,'" .
+                $_POST['vDob'] .
+                "'
+        ,'" .
+                $_POST['vDOLBD'] .
+                "'
+        ,'" .
+                $_POST['vPincode'] .
+                "')";
 
-        $sql2 = "INSERT INTO tbl_user (username, email, password) VALUES ('" . $_POST["username"] . "','" . $_POST["useremail"] . "','" . $_POST["password"] . "')";
-       
+            $sql2 =
+                "INSERT INTO tbl_user (username, email, password) VALUES ('" .
+                $_POST['username'] .
+                "','" .
+                $_POST['useremail'] .
+                "','" .
+                $_POST['password'] .
+                "')";
 
-    if (($conn->query($sql1) === TRUE && $conn->query($sql2)  === TRUE)){
-        echo "
+            require_once './vendor/autoload.php';
+            require_once './credential.php';
+
+            // Create the Transport
+            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 587, 'tls'))
+                ->setUsername(EMAIL)
+                ->setPassword(PASS);
+
+            // Create the Mailer using your created Transport
+            $mailer = new Swift_Mailer($transport);
+
+            // Create a message
+            $message = (new Swift_Message(
+                'Kurudhi - Worlds Largest Voluntary Blood Donors Database'
+            ))
+                ->setFrom(['noreply@kurudhi.com' => 'Kurudhi Technical Team'])
+                ->setTo([$_POST['useremail']])
+                ->setBody('');
+
+            // Send the message
+            if ($mailer->send($message)) {
+                echo 'Mail Send Sucessfully';
+            } else {
+                echo '
+        mail not send !
+        ';
+            }
+
+            if ($conn->query($sql1) === true && $conn->query($sql2) === true) {
+                echo "
           <script>
           sweetAlert({
                 title:'Good job!!',
@@ -696,50 +778,36 @@ if(isset($_POST["Submit"])){
                 window.location.href = 'index.html';
           });
           </script>";
-      } else {
-        echo 
-        "<script type= 'text/javascript'>
-            alert('Error: " . $sql1 . "<br>" . $conn->error."');
+            } else {
+                echo "<script type= 'text/javascript'>
+            alert('Error: Try Again ');
         </script>";
-      }
-  
-      $conn->close();
+            }
+
+            $conn->close();
+        }
     } else {
-      $_SESSION['form_submit'] = 'NULL';
-    }
-
-    require_once './vendor/autoload.php';
-    require_once './credential.php';
-
-// Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.gmail.com', 587, 'tls'))
-  ->setUsername(EMAIL)
-  ->setPassword(PASS)
-;
-
-// Create the Mailer using your created Transport
-$mailer = new Swift_Mailer($transport);
-
-// Create a message
-$message = (new Swift_Message('Welcome Raghavan'))
-  ->setFrom([EMAIL => 'John Doe'])
-  ->setTo([$_POST['useremail']])
-  ->setBody('Testing Mail')
-  ;
-
-// Send the message
-if($mailer->send($message)){
-    echo'Mail Send Sucessfully';
-}else{
-    echo'
-    mail not send !
-    ';
-}
-
-?>
+        $_SESSION['form_submit'] = 'NULL';
+    } ?>
 
 
-  <!-- ----------------------------------------- -->
+    <!-- ----------------------------------------- -->
+
+    <script>
+        // Initialize the agent at application startup.
+        const fpPromise = import('https://fpjscdn.net/v3/uWrGTIhNP522aY1lGglh')
+            .then(FingerprintJS => FingerprintJS.load())
+
+        // Get the visitor identifier when you need it.
+        fpPromise
+            .then(fp => fp.get())
+            .then(result => {
+                // This is the visitor identifier:
+                const visitorId = result.visitorId
+                console.log(visitorId)
+            })
+    </script>
+
 </body>
 
 </html>

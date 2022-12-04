@@ -1,3 +1,93 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: dashboard.html");
+    exit;
+}
+ 
+// Include config file
+require_once "../php/config.php";
+ 
+// Define variables and initialize with empty values
+$username = $password = "";
+$username_err = $password_err = $login_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Check if username is empty
+    if(empty(trim($_POST["usermail"]))){
+        $username_err = "Please enter Email.";
+    } else{
+        $username = trim($_POST["usermail"]);
+    }
+    
+    // Check if password is empty
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter your password.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate credentials
+    if(empty($username_err) && empty($password_err)){
+        // Prepare a select statement
+        $sql = "SELECT id, email, password FROM tbl_user WHERE username = ?";
+        
+        if($stmt = mysqli_prepare($conn, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            
+            // Set parameters
+            $param_username = $username;
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Store result
+                mysqli_stmt_store_result($stmt);
+                
+                // Check if username exists, if yes then verify password
+                if(mysqli_stmt_num_rows($stmt) == 1){                    
+                    // Bind result variables
+                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    if(mysqli_stmt_fetch($stmt)){
+                        if(password_verify($password, $hashed_password)){
+                            // Password is correct, so start a new session
+                            session_start();
+                            
+                            // Store data in session variables
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["useremail"] = $username;                            
+                            
+                            // Redirect user to welcome page
+                            header("location: dashboard.html");
+                        } else{
+                            // Password is not valid, display a generic error message
+                            $login_err = "Invalid username or password.";
+                        }
+                    }
+                } else{
+                    // Username doesn't exist, display a generic error message
+                    $login_err = "Invalid username or password.";
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+    
+    // Close connection
+    mysqli_close($conn);
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -45,6 +135,8 @@
 
 
 
+
+
         <main id="content">
            
             <section class="">
@@ -60,6 +152,12 @@
                     </div>
                 </section>
 
+                <?php 
+        if(!empty($login_err)){
+            echo '<div class="alert alert-danger">' . $login_err . '</div>';
+        }        
+        ?>
+
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7 mx-auto">
@@ -68,17 +166,19 @@
                                     <h2 class="card-title fs-30 font-weight-600 text-dark lh-16 mb-2">Log In</h2>
                                     <p class="mb-4">Don't have an account ? <a href="#"
                                             class="text-heading hover-primary"><u>Register Now</u></a></p>
-                                    <form class="form" action = "../php/authentication.php" onsubmit = "return validation()">
+                                    <form class="form" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                                         <div class="form-group mb-4">
                                             <label for="username-1">Email</label>
-                                            <input type="text" class="form-control form-control-lg border-0" id="username-1"
+                                            <input type="text" class="form-control form-control-lg border-0 <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" id="username-1"
                                                 name="usermail" placeholder="Your email">
+                                                <span class="invalid-feedback"><?php echo $username_err; ?></span>
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="password-2">Password</label>
                                             <div class="input-group input-group-lg">
-                                                <input type="text" class="form-control border-0 shadow-none fs-13"
+                                                <input type="text" class="form-control border-0 shadow-none fs-13 <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
                                                     id="password-2" name="password" placeholder="Password">
+                                                    <span class="invalid-feedback"><?php echo $password_err; ?></span>
                                                 <div class="input-group-append">
                                                     <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
                                                         <i class="far fa-eye-slash"></i>
@@ -99,7 +199,7 @@
                                                 <u>Forgot your password?</u>
                                             </a>
                                         </div>
-                                        <button  type ="submit" id ="btn" value ="submit" class="btn btn-primary btn-lg btn-block rounded">Log
+                                        <button  type ="submit" id ="btn" value="Login" class="btn btn-primary btn-lg btn-block rounded">Log
                                             in</button>
                                     </form>
                                     <!-- <div class="divider text-center my-2">
