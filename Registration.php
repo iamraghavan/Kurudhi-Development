@@ -737,7 +737,7 @@
                 "')";
 
             require_once './vendor/autoload.php';
-            require_once './credential.php';
+            require_once './php/credential.php';
 
             // Create the Transport
             $transport = (new Swift_SmtpTransport('smtp.gmail.com', 587, 'tls'))
@@ -753,7 +753,7 @@
             ))
                 ->setFrom(['noreply@kurudhi.com' => 'Kurudhi Technical Team'])
                 ->setTo([$_POST['useremail']])
-                ->setBody('');
+                ->setBody('Registration Successfully');
 
             // Send the message
             if ($mailer->send($message)) {
