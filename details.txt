@@ -493,3 +493,78 @@ if (!isset($_SESSION['id'])) {
 </body>
 
 </html>
+//------------------------------------------//
+---------------------------------------------------------------------
+
+Gen PDF
+
+
+require('./fpdf/fpdf.php');
+
+// require('fpdf181/fpdf.php');
+
+    class PDF extends FPDF {
+        function Header() {
+            $this->Image('./NaviBlueLogo.png',10,6,30);
+            $this->SetFont('Arial', 'B', 15);
+            $this->Cell(80);
+            $this->Cell(30, 10, 'Title', 1, 0, 'C');
+            $this->Ln(20);
+        }
+    }
+
+    $pdf = new FPDF();
+    $pdf->AliasNbPages();
+    $pdf->AddPage();
+    $pdf->SetFont('Arial', '', 10);
+
+    // $pdf->Cell(40, 10, ''. $fullname .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $jobtitle .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $organisation .' ('. $department .')');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $addressline1 .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $addressline2 .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $addressline3 .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $towncity .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $county .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $postcode .'');
+    // $pdf->Ln(8);
+    // $pdf->Cell(40, 10, ''. $email .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, ''. $telephone .'');
+    // $pdf->Ln(8);
+    // $pdf->Cell(40, 10, ''. date("d-m-Y") .'');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, 'Quotation Ref; WQ'. rand() .'');
+    // $pdf->Ln(8);
+    // $pdf->Cell(40, 10, 'Dear '. $fullname .',');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, 'As requested, please see your quotation below:');
+    // $pdf->Ln(8);
+
+    // for($i = 1; $i <= 5; $i++)
+    // $pdf->Cell(0, 10, 'Printing line number ' . $i, 0, 1);
+
+    // $pdf->Cell(40, 10, 'This quotation will be valid for the remainder of 2016 subject to our terms and conditions.');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, 'Pricing submitted is strictly confidential between Business Ltd. and ');
+    // $pdf->Ln(8);
+    // $pdf->Cell(40, 10, 'Please do come back to us if you have any queries whatsoever relating to the above quotation or if you would like');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, 'to discuss further options.');
+    // $pdf->Ln(8);
+    // $pdf->Cell(40, 10, 'We look forward to hearing from you in the near future.');
+    // $pdf->Ln(8);
+    // $pdf->Cell(40, 10, 'With best wishes,');
+    // $pdf->Ln(4);
+    // $pdf->Cell(40, 10, 'Business Ltd.');
+
+    $pdf->Output();
+    // $content = $pdf->Output('('. date("m") .'-'. date("Y") .') WQ'. rand() .'.pdf', 'F');

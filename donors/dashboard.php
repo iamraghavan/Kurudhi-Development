@@ -12,16 +12,13 @@ $fetch = mysqli_fetch_array($query);
 require '../php/config.php';
 $query = mysqli_query($conn, "SELECT * FROM tbl_registration INNER JOIN tbl_user on user_id = '$_SESSION[id]'");
 $mysql_data = mysqli_fetch_array($query);
-
-// echo "<h5 class='font-bold'>" . $mysql_data['username'] . "</h5>";
-// echo "<h6 class='text-muted mb-0'>" . $fetch['email'] . "</h6>";
 ?>
 
-<?php  
+<?php
 //  $connect = mysqli_connect("localhost", "root", "", "kurudhi");  
 //  $sql = "";  
 //  $result = mysqli_query($connect, $sql);  
- ?>  
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +27,9 @@ $mysql_data = mysqli_fetch_array($query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    echo"<title>" . $fetch['username'] . " Dashboard </title>"
-    ?>
-    
+    echo "<title>" . $fetch['username'] . " Dashboard </title>"
+        ?>
+
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -51,7 +48,9 @@ $mysql_data = mysqli_fetch_array($query);
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.html"><img src="https://firebasestorage.googleapis.com/v0/b/kurudhiweb.appspot.com/o/Assets%2Fkurudhi.png?alt=media&token=36c998ed-264c-42f2-84ef-f28e08f7d7dd" alt="Logo" srcset=""></a>
+                            <a href="index.html"><img
+                                    src="https://firebasestorage.googleapis.com/v0/b/kurudhiweb.appspot.com/o/Assets%2Fkurudhi.png?alt=media&token=36c998ed-264c-42f2-84ef-f28e08f7d7dd"
+                                    alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -96,48 +95,54 @@ $mysql_data = mysqli_fetch_array($query);
                 </a>
             </header>
             <div class="col-12 col-lg-12">
-                        <div class="card">
-                            <div class="card-body py-4 px-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-xl">
-                                        <img src="assets/images/faces/1.jpg" alt="Face 1">
-                                    </div>
-                                    <div class="ms-3 name">
-                                        <?php
-                                    require '../php/config.php';
+                <div class="card">
+                    <div class="card-body py-4 px-3">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar avatar-xl">
+                                <img src="assets/images/faces/1.jpg" alt="Face 1">
+                            </div>
+                            <div class="ms-3 name">
+                                <?php
+                                        require '../php/config.php';
 
 
                                         $query = mysqli_query($conn, "SELECT * FROM tbl_user WHERE id='$_SESSION[id]'");
-                                    $fetch = mysqli_fetch_array($query);
+                                        $fetch = mysqli_fetch_array($query);
 
-                                    echo "<h5 class='font-bold'>" . $fetch['username'] . "</h5>";
-                                    echo "<h6 class='text-muted mb-0'>" . $fetch['email'] . "</h6>";
-                                    ?>
-
-
-                                    </div>
-
-
-                                    <div class="col-12 col-md-9 order-md-1 order-first">
-                                    <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-                                    <ol class="breadcrumb">
-                                       <button name="generate_pdf" class="btn btn-dark" ">Download Profile <i style="padding-left:10px;" class="bi bi-download"></i> </button>
-                                    </ol>
-                                </nav>
-                                    </div>
-                               
-                                </div>
-                                
+                                        echo "<h5 class='font-bold'>" . $fetch['username'] . "</h5>";
+                                        echo "<h6 class='text-muted mb-0'>" . $fetch['email'] . "</h6>";
+                                        ?>
 
 
                             </div>
-                        </div>
-                
-                         
+
+
+                            <div class="col-12 col-md-9 order-md-1 order-first">
+                                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                    <ol class="breadcrumb">
+
+                                        <form action="" method="post">
+                                            <button name="generate_pdf" type="submit" value="submit"
+                                                class="btn btn-dark" ">Download Profile <i style=" padding-left:10px;"
+                                                class="bi bi-download"></i> </button>
+                                        </form>
+
+                                    </ol>
+                                </nav>
+                            </div>
+
                         </div>
 
-                        
-                
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
 
             <div class="page-heading">
                 <h3>My Profile</h3>
@@ -146,7 +151,7 @@ $mysql_data = mysqli_fetch_array($query);
                 <section class="row">
                     <div class="col-12 col-lg-6">
                         <div class="row">
-                        
+
                             <div class="col-12 col-xl-12">
                                 <div class="card">
                                     <div class="card-header">
@@ -169,9 +174,9 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Name'] . "</p>";?>
-                                                            
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Name'] . "</p>"; ?>
+
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -181,8 +186,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Sex'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Sex'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -192,8 +197,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Age'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Age'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -211,7 +216,7 @@ $mysql_data = mysqli_fetch_array($query);
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table table-hover table-lg">
-                                            
+
                                                 <tbody>
                                                     <tr>
                                                         <td class="col-3">
@@ -220,8 +225,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Address'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Address'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -231,8 +236,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Country'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Country'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -242,8 +247,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['State'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['State'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -253,8 +258,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['City'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['City'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -264,8 +269,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Area'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Area'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -275,8 +280,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Pincode'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Pincode'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -284,15 +289,15 @@ $mysql_data = mysqli_fetch_array($query);
                                         </div>
                                     </div>
                                 </div>
-                            
+
                             </div>
-     
-                           
-                            </div>
+
+
+                        </div>
                     </div>
-<div class="col-12 col-lg-6">
-    <div class="row">
-    <div class="col-12 col-xl-12">
+                    <div class="col-12 col-lg-6">
+                        <div class="row">
+                            <div class="col-12 col-xl-12">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4>Profile View / Contact Information</h4>
@@ -300,7 +305,7 @@ $mysql_data = mysqli_fetch_array($query);
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table table-hover table-lg">
-                                               
+
                                                 <tbody>
                                                     <tr>
                                                         <td class="col-3">
@@ -309,8 +314,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Email'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Email'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -320,8 +325,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['ContactNumber'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['ContactNumber'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -331,23 +336,23 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['WhatsappNumber'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['WhatsappNumber'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                 </tbody>
-                                            
+
                                             </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-    
-                       
+
+
 
                             <div class="col-12 col-xl-12">
-                            <div class="card">
+                                <div class="card">
                                     <div class="card-header">
                                         <h4>Profile View / Blood Information</h4>
                                     </div>
@@ -362,8 +367,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['BloodType'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['BloodType'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -373,8 +378,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Availability'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['Availability'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -384,8 +389,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['WeightKG'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['WeightKG'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -395,36 +400,35 @@ $mysql_data = mysqli_fetch_array($query);
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['DOB'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['DOB'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="col-3">
                                                             <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Late Date of Donation (Optional)</p>
+                                                                <p class="font-bold ms-3 mb-0">Late Date of Donation
+                                                                    (Optional)</p>
                                                             </div>
                                                         </td>
                                                         <td class="col-auto">
-                                                        <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['DOLBD'] . "</p>";?>
+                                                            <?php
+                                                        echo "<p class=' mb-0'>" . $mysql_data['DOLBD'] . "</p>"; ?>
                                                         </td>
                                                     </tr>
-                                                
+
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
-                                </div>
-                        
-    </div>
-</div>
-                    
-                    </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
             </div>
-
-
         </div>
     </div>
     <script src="./assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -433,5 +437,8 @@ $mysql_data = mysqli_fetch_array($query);
     <script src="./assets/js/pages/dashboard.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
+
+
+
 
 </html>
