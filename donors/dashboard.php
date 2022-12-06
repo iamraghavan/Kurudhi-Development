@@ -76,8 +76,6 @@ $mysql_data = mysqli_fetch_array($query);
                                 <span>Logout</span>
                             </a>
                         </li>
-
-
                     </ul>
                 </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
@@ -98,21 +96,21 @@ $mysql_data = mysqli_fetch_array($query);
                             </div>
                             <div class="ms-3 name">
                                 <?php
-                                        require '../php/config.php';
+                                require '../php/config.php';
 
 
-                                        $query = mysqli_query($conn, "SELECT * FROM tbl_user WHERE id='$_SESSION[id]'");
-                                        $fetch = mysqli_fetch_array($query);
+                                $query = mysqli_query($conn, "SELECT * FROM tbl_user WHERE id='$_SESSION[id]'");
+                                $fetch = mysqli_fetch_array($query);
 
-                                        echo "<h5 class='font-bold'>" . $fetch['username'] . "</h5>";
-                                        echo "<h6 class='text-muted mb-0'>" . $fetch['email'] . "</h6>";
-                                        ?>
+                                echo "<h5 class='font-bold'>" . $fetch['username'] . "</h5>";
+                                echo "<h6 class='text-muted mb-0'>" . $fetch['email'] . "</h6>";
+                                ?>
 
 
                             </div>
 
 
-                           
+
 
                         </div>
 
@@ -125,308 +123,332 @@ $mysql_data = mysqli_fetch_array($query);
             </div>
 
 
+            <section id="multiple-column-form">
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div? class="card">
+                            <div class="page-content">
+                                <section class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="row">
 
-
-            <div class="page-heading">
-                <h3>My Profile</h3>
-            </div>
-            <div class="page-content">
-                <section class="row">
-                    <div class="col-12 col-lg-6">
-                        <div class="row">
-
-                            <div class="col-12 col-xl-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile View / General Information</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-lg">
-                                                <thead>
-                                                    <tr>
-                                                        <!-- <th>Name</th>
+                                            <div class="col-12 col-xl-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4>Profile View / General Information</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-lg">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <!-- <th>Name</th>
                                                         <th>Comment</th> -->
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Name </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Name'] . "</p>"; ?>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Name </p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Name'] . "</p>"; ?>
 
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Gender</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Sex'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Age</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Age'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Gender
+                                                                                </p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Sex'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Age</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Age'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-xl-12 col-xl-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4>Profile View / Location Information</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-lg">
+
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Address
+                                                                                </p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Address'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Country
+                                                                                </p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Country'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">State</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['State'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">City</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['City'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Area /
+                                                                                    Town / City</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Area'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Postal
+                                                                                    Code</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Pincode'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4>Profile View / Contact Information</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-lg">
 
-                            <div class="col-12 col-xl-12 col-xl-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile View / Location Information</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Email
+                                                                                </p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Email'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Contact
+                                                                                    Number</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['ContactNumber'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Whatsapp
+                                                                                    Number</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['WhatsappNumber'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
 
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Address </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Address'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Country</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Country'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">State</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['State'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">City</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['City'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Area / Town / City</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Area'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Postal Code</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Pincode'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="col-12 col-xl-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4>Profile View / Blood Information</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Blood
+                                                                                    Group </p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['BloodType'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">
+                                                                                    Availability</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['Availability'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Weight
+                                                                                    (in Kg.)</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['WeightKG'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Date of
+                                                                                    Birth</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['DOB'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="col-3">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <p class="font-bold ms-3 mb-0">Late Date
+                                                                                    of Donation
+                                                                                    (Optional)</p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-auto">
+                                                                            <?php
+                                                                            echo "<p class=' mb-0'>" . $mysql_data['DOLBD'] . "</p>"; ?>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-12 px-4">
+
+                                                        <form action="./gendrate.php" method="post">
+                                                            <button class='btn btn-primary btn-lg' name='generate_pdf' type='submit'>Download Profile <i
+                                                                    style="padding-left:10px;"
+                                                                    class="bi bi-download"></i> </button>
+                                                        </form>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
                                         </div>
                                     </div>
-                                </div>
+
+                                </section>
 
                             </div>
 
 
-                        </div>
+
+
                     </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="row">
-                            <div class="col-12 col-xl-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile View / Contact Information</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-lg">
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Email </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Email'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Contact Number</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['ContactNumber'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Whatsapp Number</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['WhatsappNumber'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
 
-
-
-                            <div class="col-12 col-xl-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile View / Blood Information</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-lg">
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Blood Group </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['BloodType'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Availability</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['Availability'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Weight (in Kg.)</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['WeightKG'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Date of Birth</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['DOB'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <p class="font-bold ms-3 mb-0">Late Date of Donation
-                                                                    (Optional)</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <?php
-                                                        echo "<p class=' mb-0'>" . $mysql_data['DOLBD'] . "</p>"; ?>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </section>
-                <div class="col-12 col-md-9 order-md-1 order-first">
-                                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-                                    <ol class="breadcrumb">
-
-                                        <form action="./gendrate.php" method="post">
-                                            
-                                            <button name="generate_pdf" type="submit" value="submit"
-                                                class="btn btn-dark" ">Download Profile <i style=" padding-left:10px;"
-                                                class="bi bi-download"></i> </button>
-                                        </form>
-
-                                    </ol>
-                                </nav>
-                            </div>
-            </div>
+                </div>
         </div>
+
+
+        </section>
+
+
+    </div>
     </div>
     <script src="./assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>

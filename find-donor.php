@@ -166,7 +166,7 @@
                     <form>
                         <div class="form-group">
                             <label for="location" class="sr-only">Location</label>
-                            <select class="form-control border-0 shadow-none form-control-lg" title="Location"
+                            <select name='bloodtype' class="form-control border-0 shadow-none form-control-lg" title="Location"
                                 data-style="btn-lg py-2 h-52" id="">
                                 <option selected>Select Blood Group</option>
                                 <option value="A+">A+</option>
@@ -191,14 +191,14 @@
                         </div>
                         <div class="form-group">
                             <!-- <label for="type" class="sr-only">Select Country</label> -->
-                            <select class="countries form-control border-0 shadow-none form-control-lg custom-select"
+                            <select name='country' class="countries form-control border-0 shadow-none form-control-lg custom-select"
                                 title="Select Country" id="">
                                 <option value="">Select Country</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="status" class="sr-only">Select State</label>
-                            <select class="states form-control border-0 shadow-none form-control-lg custom-select"
+                            <select name='state' class="states form-control border-0 shadow-none form-control-lg custom-select"
                                 title="Select State" id="">
                                 <option value="">Select State</option>
                             </select>
@@ -206,7 +206,7 @@
                         <div class="form-row mb-4">
                             <div class="col">
                                 <label for="bed" class="sr-only">Select City</label>
-                                <select class="cities form-control border-0 shadow-none form-control-lg custom-select"
+                                <select name='city' class="cities form-control border-0 shadow-none form-control-lg custom-select"
                                     title="Select City" id="bed">
                                     <option value="">Select City</option>
                                 </select>
@@ -217,46 +217,60 @@
                         .searchbar{
                             margin-top: 10px !important;
                         }
-                        .strike {
-        display: block;
-        text-align: center;
-        overflow: hidden;
-        white-space: nowrap; 
-    }
+                        .divider {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	margin: 1rem 0
+}
 
-    .strike > span {
-        position: relative;
-        display: inline-block;
-    }
-	
-    .strike > span:before,
-    .strike > span:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 9999px;
-        /* Here is the modification */
-        height: 5px; /* space between lines */
-        margin-top: -2px; /* adjust vertical align */
-        border-top: 1px solid red;
-        border-bottom: 1px solid red;
-    }
+.divider .divider-text {
+	position: relative;
+	display: inline-block;
+	padding: 0 1rem;
+	background-color: #fff
+}
 
-    .strike > span:before {
-        right: 100%;
-        margin-right: 15px;
-    }
+.divider .divider-text:after,
+.divider .divider-text:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 9999px;
+	border-top: 1px solid #dfe3e7
+}
 
-    .strike > span:after {
-        left: 100%;
-        margin-left: 15px;
-    }
+.divider .divider-text:before {
+	right: 100%
+}
+
+.divider .divider-text:after {
+	left: 100%
+}
+
+.divider.divider-left .divider-text {
+	left: 0;
+	float: left;
+	padding-left: 0
+}
+
+.divider.divider-left-center .divider-text {
+	left: -25%
+}
+
+.divider.divider-right-center .divider-text {
+	left: 25%
+}
+
+.divider.divider-right .divider-text {
+	float: right;
+	padding-right: 0
+}
+ 
                       </style>
-
-<div class="strike">
-    <span>serach via pincode</span>
-</div>
-                    
+<div class="divider">
+    <div class="divider-text">OR - Enter PINCODE</div>
+</div>            
                     
                         <form class="d-block d-md-none">
                  
@@ -285,6 +299,8 @@
                 </div>
             </div>
         </section>
+
+        
         
 
         <section class="pt-11 pt-md-14 pb-11 bg-gray-01">
@@ -292,17 +308,40 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 pb-6">
                         <div class="card" data-animate="fadeInUp">
-                            <div
+
+                        <?php
+         if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+            $state = $_POST['state'];
+            $city = $_POST['city'];
+            $country = $_POST['country'];
+            $bloodtype = $_POST['bloodtype'];
+            
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "kurudhi";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname); ?>
+
+            
+              <?php
+
+                $result = $conn->query("SELECT * FROM tbl_registration WHERE State='$state' and City='$city' and Country='$country'and BloodType='$bloodtype'") or die(mysqli_error($conn));
+                if($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) :
+                    ?>
+                   <div
                                 class="card-header bg-transparent d-flex justify-content-between align-items-center py-3">
                                 <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">
-                                    $1.250.000
+                                <?php  echo $row['name'] ?>
                                 </p>
-                                <span class="badge badge-primary">For Sale</span>
+                                <!-- <span class="badge badge-primary">For Sale</span> -->
                             </div>
                             <div class="card-body py-2">
                                 <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                        class="text-dark hover-primary">Home in Metric Way</a></h2>
-                                <p class="font-weight-500 text-gray-light mb-0">1421 San Pedro St, Los Angeles</p>
+                                        class="text-dark hover-primary"> <?php  echo $row['name'] ?></a></h2>
+                                <p class="font-weight-500 text-gray-light mb-0"> <?php  echo $row['name'] ?></p>
                             </div>
                             <div class="card-footer bg-transparent pt-3 pb-4">
                                 <ul class="list-inline d-flex mb-0 flex-wrap mr-n5">
@@ -311,31 +350,43 @@
                                         <svg class="icon icon-bedroom fs-18 text-primary mr-1">
                                             <use xlink:href="#icon-bedroom"></use>
                                         </svg>
-                                        3 Br
+                                        <?php  echo $row['name'] ?>
                                     </li>
                                     <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
                                         data-toggle="tooltip" title="3 Bathrooms">
                                         <svg class="icon icon-shower fs-18 text-primary mr-1">
                                             <use xlink:href="#icon-shower"></use>
                                         </svg>
-                                        3 Ba
+                                        <?php  echo $row['name'] ?>
                                     </li>
                                     <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
                                         data-toggle="tooltip" title="Size">
                                         <svg class="icon icon-square fs-18 text-primary mr-1">
                                             <use xlink:href="#icon-square"></use>
                                         </svg>
-                                        2300 Sq.Ft
+                                        <?php  echo $row['name'] ?>
                                     </li>
                                     <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
                                         data-toggle="tooltip" title="1 Garage">
                                         <svg class="icon icon-Garage fs-18 text-primary mr-1">
                                             <use xlink:href="#icon-Garage"></use>
                                         </svg>
-                                        1 Gr
+                                        <?php  echo $row['name'] ?>
                                     </li>
                                 </ul>
                             </div>
+                        
+                  
+                  
+                  <?php 
+                        endwhile;
+                      } 
+                        else { ?>
+                   <?php echo "No Data Found "?> 
+                  <?php } }?> 
+
+
+                           
                         </div>
                     </div>
             </div>
@@ -678,6 +729,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://demos.phplift.net/country-state-and-city-dropdown-jquery/js/countrystatecity.js?v3"></script>
+
+
+
+    <!-- $dataRequest = mysqli_query($conn, "SELECT * FROM tbl_registration INNER JOIN tbl_user on user_id = id");
+    $mysql_data = mysqli_fetch_array($dataRequest); -->
+
+
+         
+
 </body>
 
 </html>
+

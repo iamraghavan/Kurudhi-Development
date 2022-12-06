@@ -568,3 +568,18 @@ require('./fpdf/fpdf.php');
 
     $pdf->Output();
     // $content = $pdf->Output('('. date("m") .'-'. date("Y") .') WQ'. rand() .'.pdf', 'F');
+
+
+
+
+
+    =====================================================
+
+
+
+
+    <?php  echo $row['name'] ?>
+                  <?php  echo $row['email'] ?>
+                  <?php  echo $row['contactNum'] ?><?php  echo $row['altContactNum'] ?>
+                  <?php  echo $row['city'] ?>
+                  <?php  echo $row['area'] ?>
