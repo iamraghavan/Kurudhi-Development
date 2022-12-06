@@ -14,11 +14,6 @@ $query = mysqli_query($conn, "SELECT * FROM tbl_registration INNER JOIN tbl_user
 $mysql_data = mysqli_fetch_array($query);
 ?>
 
-<?php
-//  $connect = mysqli_connect("localhost", "root", "", "kurudhi");  
-//  $sql = "";  
-//  $result = mysqli_query($connect, $sql);  
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -117,19 +112,7 @@ $mysql_data = mysqli_fetch_array($query);
                             </div>
 
 
-                            <div class="col-12 col-md-9 order-md-1 order-first">
-                                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-                                    <ol class="breadcrumb">
-
-                                        <form action="" method="post">
-                                            <button name="generate_pdf" type="submit" value="submit"
-                                                class="btn btn-dark" ">Download Profile <i style=" padding-left:10px;"
-                                                class="bi bi-download"></i> </button>
-                                        </form>
-
-                                    </ol>
-                                </nav>
-                            </div>
+                           
 
                         </div>
 
@@ -428,6 +411,20 @@ $mysql_data = mysqli_fetch_array($query);
                     </div>
 
                 </section>
+                <div class="col-12 col-md-9 order-md-1 order-first">
+                                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                    <ol class="breadcrumb">
+
+                                        <form action="./gendrate.php" method="post">
+                                            
+                                            <button name="generate_pdf" type="submit" value="submit"
+                                                class="btn btn-dark" ">Download Profile <i style=" padding-left:10px;"
+                                                class="bi bi-download"></i> </button>
+                                        </form>
+
+                                    </ol>
+                                </nav>
+                            </div>
             </div>
         </div>
     </div>

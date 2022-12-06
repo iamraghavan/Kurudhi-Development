@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../php/config.php');
 
 $query = mysqli_query($conn, "SELECT * FROM tbl_registration INNER JOIN tbl_user on user_id = '$_SESSION[id]'");
