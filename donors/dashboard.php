@@ -1,19 +1,12 @@
 <?php
 session_start();
-if (!isset($_SESSION['id'])) {
-    header('location:index.php');
-}
-require '../php/config.php';
+
+require './php/config.php';
 $query = mysqli_query($conn, "SELECT * FROM tbl_user WHERE id='$_SESSION[id]'");
 $fetch = mysqli_fetch_array($query);
+$query_data = mysqli_query($conn, "SELECT * FROM tbl_registration INNER JOIN tbl_user on user_id = '$_SESSION[id]'");
+$mysql_data = mysqli_fetch_array($query_data);
 ?>
-
-<?php
-require '../php/config.php';
-$query = mysqli_query($conn, "SELECT * FROM tbl_registration INNER JOIN tbl_user on user_id = '$_SESSION[id]'");
-$mysql_data = mysqli_fetch_array($query);
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +14,8 @@ $mysql_data = mysqli_fetch_array($query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-    echo "<title>" . $fetch['username'] . " Dashboard </title>"
-        ?>
-
-
+    <?php echo "<title>" . $fetch['username'] . " Dashboard </title>" ?>
+    <!-- packages -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
@@ -34,6 +24,7 @@ $mysql_data = mysqli_fetch_array($query);
     <link rel="stylesheet" href="./assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+    <!-- packeges -->
 </head>
 
 <body>
@@ -64,7 +55,7 @@ $mysql_data = mysqli_fetch_array($query);
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="javascript:void(0)" class='sidebar-link'>
+                            <a href="./update-user.php" class='sidebar-link'>
                                 <i class="bi bi-person-lines-fill"></i>
                                 <span>Edit Profile Data</span>
                             </a>
@@ -260,8 +251,7 @@ $mysql_data = mysqli_fetch_array($query);
                                                                     <tr>
                                                                         <td class="col-3">
                                                                             <div class="d-flex align-items-center">
-                                                                                <p class="font-bold ms-3 mb-0">Postal
-                                                                                    Code</p>
+                                                                                <p class="font-bold ms-3 mb-0">Postal Code</p>
                                                                             </div>
                                                                         </td>
                                                                         <td class="col-auto">
@@ -417,7 +407,8 @@ $mysql_data = mysqli_fetch_array($query);
                                                     <div class="col-12 col-md-12 px-4">
 
                                                         <form action="./gendrate.php" method="post">
-                                                            <button class='btn btn-primary btn-lg' name='generate_pdf' type='submit'>Download Profile <i
+                                                            <button class='btn btn-primary btn-lg' name='generate_pdf'
+                                                                type='submit'>Download Profile <i
                                                                     style="padding-left:10px;"
                                                                     class="bi bi-download"></i> </button>
                                                         </form>
@@ -461,3 +452,8 @@ $mysql_data = mysqli_fetch_array($query);
 
 
 </html>
+
+<?php
+$ip = gethostbyname('http://localhost/kurudhi.v0.2/');
+echo $ip;
+?>

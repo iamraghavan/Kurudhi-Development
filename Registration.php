@@ -68,7 +68,7 @@
                         <ul class="navbar-nav hover-menu main-menu px-0 mx-xl-n4">
                             <li id="navbar-item-home" aria-haspopup="true" aria-expanded="false"
                                 class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                                <a class="nav-link p-0" href="./Index.html" data-toggle="dropdown">
+                                <a class="nav-link p-0" href="./index.html" data-toggle="dropdown">
                                     Home Page
                                     <span class="caret"></span>
                                 </a>
