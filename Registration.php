@@ -41,48 +41,46 @@
         }
     </style>
 
-    <header
-        class="main-header position-absolute fixed-top m-0 navbar-dark header-sticky header-sticky-smart header-mobile-xl header-02">
+<header class="main-header navbar-light header-sticky header-sticky-smart header-mobile-lg">
         <div class="sticky-area">
-            <div class="container container-xxl">
-                <nav class="navbar navbar-expand-xl bg-transparent px-0 w-100">
-                    <a class="navbar-brand order-0 order-xl-1 mx-xl-auto" href="index.html">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/kurudhiweb.appspot.com/o/Assets%2Fkurudhi.png?alt=media&token=36c998ed-264c-42f2-84ef-f28e08f7d7dd"
-                            alt="Kurudhi Logo" class="normal-logo logo-kurudhi">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/kurudhiweb.appspot.com/o/Assets%2Fkurudhi.png?alt=media&token=36c998ed-264c-42f2-84ef-f28e08f7d7dd"
-                            alt="kurudhi Logo" class="sticky-logo logo-kurudhi">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg px-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./images/kurudhi.png" alt="Kurudhi" class="d-none d-lg-inline-block logo-kurudhi">
+                        <img src="./images/logo-light.png" alt="Kurudhi" class="d-inline-block d-lg-none logo-kurudhi">
                     </a>
-                    <div class="d-flex d-xl-none order-2">
-                        <!-- <a class="d-block ml-auto mr-4 position-relative text-white p-2" href="#">
-                            <i class="fal fa-heart fs-large-4"></i>
-                            <span class="badge badge-primary badge-circle badge-absolute">1</span>
-                        </a> -->
-                        <button class="navbar-toggler border-0 pr-0" type="button" data-toggle="collapse"
-                            data-target="#primaryMenu03" aria-controls="primaryMenu03" aria-expanded="false"
+                    <div class="d-flex d-lg-none ml-auto">
+
+                        <button class="navbar-toggler border-0 px-0" type="button" data-toggle="collapse"
+                            data-target="#primaryMenu01" aria-controls="primaryMenu01" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <span class="text-black-50 fs-24"><i class="fal fa-bars"></i></span>
+                            <span class="text-white fs-24"><i class="fal fa-bars"></i></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse order-3 order-xl-0 mt-3 mt-xl-0 mr-auto flex-grow-0"
-                        id="primaryMenu03">
-                        <ul class="navbar-nav hover-menu main-menu px-0 mx-xl-n4">
-                            <li id="navbar-item-home" aria-haspopup="true" aria-expanded="false"
+                    <div class="collapse navbar-collapse mt-3 mt-lg-0 mx-auto flex-grow-0" id="primaryMenu01">
+                        <ul class="navbar-nav hover-menu main-menu px-0 mx-lg-n4">
+                            
+                        <li id="navbar-item-listing" aria-haspopup="true" aria-expanded="false"
                                 class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                                <a class="nav-link p-0" href="./index.html" data-toggle="dropdown">
-                                    Home Page
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer"
+                                    href="./index.html" data-toggle="">
+                                    Home
                                     <span class="caret"></span>
                                 </a>
                             </li>
-                            <li id="navbar-item-listing" aria-haspopup="true" aria-expanded="false"
+                        <li id="navbar-item-home" aria-haspopup="true" aria-expanded="false"
                                 class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                                <a class="nav-link p-0" href="" data-toggle="dropdown">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="index.html"
+                                    data-toggle="dropdown">
                                     Who we Are ?
                                     <span class="caret"></span>
                                 </a>
                             </li>
+                            
                             <li id="navbar-item-dashboard" aria-haspopup="true" aria-expanded="false"
                                 class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                                <a class="nav-link p-0" href="#" data-toggle="dropdown">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#"
+                                    data-toggle="dropdown">
                                     Find Donor
                                     <span class="caret"></span>
                                 </a>
@@ -90,7 +88,8 @@
                             </li>
                             <li id="navbar-item-pages" aria-haspopup="true" aria-expanded="false"
                                 class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                                <a class="nav-link p-0" href="#" data-toggle="dropdown">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#"
+                                    data-toggle="dropdown">
                                     Blood Request
                                     <span class="caret"></span>
                                 </a>
@@ -98,44 +97,40 @@
                             </li>
                             <li id="navbar-item-docs" aria-haspopup="true" aria-expanded="false"
                                 class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                                <a class="nav-link p-0" href="#" data-toggle="dropdown">
+                                <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#"
+                                    data-toggle="dropdown">
                                     Invite Friends
                                     <span class="caret"></span>
                                 </a>
 
                             </li>
                         </ul>
-                    </div>
-                    <div class="ml-auto d-none d-xl-block order-xl-2">
-                        <ul
-                            class="navbar-nav flex-row ml-auto align-items-center justify-content-lg-end flex-wrap py-2">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link mr-md-2 pr-2 pl-0 pl-lg-2" href="" id="bd-versions" data-toggle=""
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span id="clock"></span>
-                                </a>
 
-                            </li>
-                            <li class="divider"></li>
-                            <li class="nav-item ">
-                                <a class="nav-link pl-3 pr-2" data-toggle="modal" href="./donors/index.html">DONOR
-                                    LOGIN</a>
-                            </li>
+                        <style>
+                            .clock {
+                                margin: 6.5px 0 0 0;
+                            }
+                        </style>
+                        <div class="d-block d-lg-none">
+                            <ul class="navbar-nav flex-row justify-content-lg-end d-flex flex-wrap py-3">
+
+                                <li class="nav-item">
+                                    <a class="nav-link pl-3 pr-2" target="_blank" rel="noopener noreferrer"
+                                        href="./donors/index.html"> <i class="far fa-sign-in ml-2"></i> <b>DONOR
+                                            LOGIN</b></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <ul class="navbar-nav flex-row justify-content-lg-end d-flex flex-wrap text-body py-2">
 
                             <li class="nav-item">
-                                <a class="btn btn-outline-light btn-lg text-white rounded-lg bg-hover-primary border-hover-primary hover-white d-none d-lg-block"
-                                    href="./donors/index.html">
-                                    Donor Registration
-                                    <!-- <img src="images/add-listing-icon.png" alt="Add listing"
-                                        class="ml-1 normal-button-icon"> -->
-                                    <!-- <img src="images/add-listing-icon-primary.png" alt="Add listing"
-                                        class="ml-1 sticky-button-icon"> -->
-                                </a>
-                                <a class="btn btn-primary btn-lg d-block d-lg-none" href="./donors/index.html">
-                                    Donor Registration
-                                    <!-- <img src="images/add-listing-icon.png" alt="Add listing" class="ml-1"> -->
-                                </a>
+                                <a class="nav-link pl-3 pr-2" target="_blank" rel="noopener noreferrer"
+                                    href="./donors/index.html"><i class="far fa-sign-in ml-2"></i> <b>DONOR
+                                        LOGIN</b></a>
                             </li>
+
 
                         </ul>
                     </div>
@@ -143,7 +138,6 @@
             </div>
         </div>
     </header>
-
     <style>
 
     </style>
