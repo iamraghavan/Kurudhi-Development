@@ -7,7 +7,9 @@
     <title>Kurudhi - World's Largest Voluntary Blood Donors Database, India blood donors, Tamil Nadu Blood</title>
 
     <script src="../cdn-cgi/apps/head/2oc_RD5SS6wgN5SiQnSEnWVNHg8.js"></script>
-    <link href="../css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="../css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="./vendors/fontawesome-pro-5/css/all.css">
     <link rel="stylesheet" href="./vendors/bootstrap-select/css/bootstrap-select.min.css">
@@ -47,40 +49,52 @@
                 </a>
                 <div class="d-flex d-lg-none ml-auto">
 
-                    <button class="navbar-toggler border-0 px-0" type="button" data-toggle="collapse" data-target="#primaryMenu01" aria-controls="primaryMenu01" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler border-0 px-0" type="button" data-toggle="collapse"
+                        data-target="#primaryMenu01" aria-controls="primaryMenu01" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="text-white fs-24"><i class="fal fa-bars"></i></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse mt-3 mt-lg-0 mx-auto flex-grow-0" id="primaryMenu01">
                     <ul class="navbar-nav hover-menu main-menu px-0 mx-lg-n4">
-                        <li id="navbar-item-home" aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="index.html" data-toggle="dropdown">
+                        <li id="navbar-item-home" aria-haspopup="true" aria-expanded="false"
+                            class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="index.html"
+                                data-toggle="dropdown">
                                 Who we Are ?
                                 <span class="caret"></span>
                             </a>
                         </li>
-                        <li id="navbar-item-listing" aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="./registration.php" data-toggle="">
+                        <li id="navbar-item-listing" aria-haspopup="true" aria-expanded="false"
+                            class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="./registration.php"
+                                data-toggle="">
                                 Donor Registration
                                 <span class="caret"></span>
                             </a>
                         </li>
-                        <li id="navbar-item-dashboard" aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#" data-toggle="dropdown">
+                        <li id="navbar-item-dashboard" aria-haspopup="true" aria-expanded="false"
+                            class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#"
+                                data-toggle="dropdown">
                                 Find Donor
                                 <span class="caret"></span>
                             </a>
 
                         </li>
-                        <li id="navbar-item-pages" aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#" data-toggle="dropdown">
+                        <li id="navbar-item-pages" aria-haspopup="true" aria-expanded="false"
+                            class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#"
+                                data-toggle="dropdown">
                                 Blood Request
                                 <span class="caret"></span>
                             </a>
 
                         </li>
-                        <li id="navbar-item-docs" aria-haspopup="true" aria-expanded="false" class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
-                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#" data-toggle="dropdown">
+                        <li id="navbar-item-docs" aria-haspopup="true" aria-expanded="false"
+                            class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
+                            <a class="nav-link p-0" target="_blank" rel="noopener noreferrer" href="#"
+                                data-toggle="dropdown">
                                 Invite Friends
                                 <span class="caret"></span>
                             </a>
@@ -97,7 +111,8 @@
                         <ul class="navbar-nav flex-row justify-content-lg-end d-flex flex-wrap py-3">
 
                             <li class="nav-item">
-                                <a class="nav-link pl-3 pr-2" target="_blank" rel="noopener noreferrer" href="./donors/index.html"> <i class="far fa-sign-in ml-2"></i> <b>DONOR
+                                <a class="nav-link pl-3 pr-2" target="_blank" rel="noopener noreferrer"
+                                    href="./donors/index.html"> <i class="far fa-sign-in ml-2"></i> <b>DONOR
                                         LOGIN</b></a>
                             </li>
                         </ul>
@@ -107,7 +122,8 @@
                     <ul class="navbar-nav flex-row justify-content-lg-end d-flex flex-wrap text-body py-2">
 
                         <li class="nav-item">
-                            <a class="nav-link pl-3 pr-2" target="_blank" rel="noopener noreferrer" href="./donors/index.html"><i class="far fa-sign-in ml-2"></i> <b>DONOR
+                            <a class="nav-link pl-3 pr-2" target="_blank" rel="noopener noreferrer"
+                                href="./donors/index.html"><i class="far fa-sign-in ml-2"></i> <b>DONOR
                                     LOGIN</b></a>
                         </li>
 
@@ -130,10 +146,11 @@
             </ol>
             <h1 class="fs-30 lh-1 mb-0 text-heading font-weight-600">Search Donor</h1>
             <div class="mt-6 form-search-01">
-                <div class="form-inline mx-n1" id="accordion-5">
+                <form class="form-inline mx-n1" action="" method="post" id="accordion-5">
                     <div class="form-group p-1">
                         <label for="location" class="sr-only">Blood Group</label>
-                        <select placeholder="Select Blood Group" name="bloodGroupType" required class="form-control border-0 shadow-xxs-1 bg-transparent font-weight-600 selectpicker">
+                        <select placeholder="Select Blood Group" name="bloodgroup" required
+                            class="form-control border-0 shadow-xxs-1 bg-transparent font-weight-600 selectpicker">
                             <option value="">Blood Group</option>
                             <option value="A+">A+</option>
                             <option value="A-">A-</option>
@@ -159,19 +176,22 @@
                     </div>
                     <div class="form-group p-2">
                         <label for="any-price" class="sr-only">Country</label>
-                        <select name="country" class="countries form-control border-0 shadow-xxs-1 bg-transparent font-weight-600">
+                        <select name="country"
+                            class="countries form-control border-0 shadow-xxs-1 bg-transparent font-weight-600">
                             <option value="">Select Your Country</option>
                         </select>
                     </div>
                     <div class="form-group p-1">
                         <label for="type" class="sr-only">State</label>
-                        <select name="state" class="states form-control border-0 shadow-xxs-1 bg-transparent font-weight-600">
+                        <select name="state"
+                            class="states form-control border-0 shadow-xxs-1 bg-transparent font-weight-600">
                             <option value="">Select Your State</option>
                         </select>
                     </div>
                     <div class="form-group p-1">
                         <label for="status" class="sr-only">All status</label>
-                        <select name="city" class="cities form-control border-0 shadow-xxs-1 bg-transparent font-weight-600">
+                        <select name="city"
+                            class="cities form-control border-0 shadow-xxs-1 bg-transparent font-weight-600">
                             <option value="">Select City</option>
                         </select>
 
@@ -181,18 +201,29 @@
                     </div>
 
 
-                </div>
+                </form>
+
+
             </div>
         </nav>
     </div>
 </section>
 
 
+<style>
+    .grid-container {
+  display: grid;
+    }
+</style>
+
+
 
 <main id="content" class="bg-gray-01">
     <div class="px-3 px-lg-6 px-xxl-13 py-5 py-lg-10">
+    <div class="container">
 
-        <?php if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $state = $_POST['state'];
             $city = $_POST['city'];
@@ -206,63 +237,91 @@
 
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
+            $query_data = mysqli_query($conn, "SELECT * FROM tbl_registration INNER JOIN tbl_user on user_id = id");
+            $mysql_data = mysqli_fetch_array($query_data);
+
+
         ?>
 
-            <div class="table-responsive">
-                <table class="table table-hover border rounded-lg mb-6 bg-white">
-                    <thead class="thead-sm thead-black">
-                        <tr>
-                            <th scope="col" class="border-top-0 px-6 pt-5 pb-4">Donor Name</th>
-                            <th scope="col" class="border-top-0 pt-5 pb-4">Email</th>
-                            <th scope="col" class="border-top-0 pt-5 pb-4">Mobile No.</th>
-                            <th scope="col" class="border-top-0 pt-5 pb-4">Available/ Unavailable</th>
-                            <th scope="col" class="border-top-0 pt-5 pb-4">Location</th>
-                            <!-- <th scope="col" class="border-top-0 pt-5 pb-4">Expiry Date</th> -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        ($result = $conn->query(
-                            "SELECT * FROM tbl_registration WHERE State='$state' and City='$city' and Country='$country'and BloodType='$BloodGroup'"
-                        )
-                        ) or die(mysqli_error($conn));
-                        if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) : ?>
-                                <tr class="shadow-hover-xs-2 bg-hover-white">
-                                    <td class="align-middle p-6">
-                                        <?php echo $row['Name'] ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?php echo $row['Email'] ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?php echo $row['ContactNumber'] ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?php echo $row['BloodType'] ?>
-                                    </td>
-                                    <td class="align-middle">
-                                        <?php echo $row['DOB'] ?>
-                                    </td>
 
-                                </tr>
-                            <?php endwhile;
-                        } else {
-                            ?>
-                            <tr class="tabel-danger">
-                                <td>
-                                    <?php echo 'No Data Found '; ?>
-                                </td>
-                            </tr>
-                    <?php
-                        }
-                    } ?>
 
-                    </tbody>
-                </table>
+<div class="row">
+        <?php
+            ($result = $conn->query(
+                "SELECT * FROM tbl_registration WHERE State='$state' and City='$city' and Country='$country'and BloodType='$BloodGroup'"
+            )
+            ) or die(mysqli_error($conn));
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()): ?>
+
+
+    
+<div class="col-lg-4 col-md-6 pb-6">
+                <div class="card" data-animate="fadeInUp">
+                    <div class="card-header bg-transparent d-flex justify-content-between align-items-center py-3">
+                        <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">
+                        <?php echo $row['Name'] ?>
+                        </p>
+                        <span class="badge badge-primary"><?php echo $row['Area'] ?></span>
+                    </div>
+                    <div class="card-body py-2">
+                        <h2 class="fs-16 lh-2 mb-0"><span style='margin-right:10px;'><i class="far fa-phone ml-2"></i></span><?php echo $row['ContactNumber'] ?></h2>
+                        <p class="font-weight-500 text-gray-light mb-0"><span style='margin-right:10px;'><i class="far fa-whatsapp-square ml-2"></i></span><?php echo $row['WhatsappNumber'] ?></p>
+                    </div>
+                    <div class="card-footer bg-transparent pt-3 pb-4">
+                        <ul class="list-inline d-flex mb-0 flex-wrap mr-n5">
+                            <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
+                                data-toggle="tooltip" title="3 Bedroom">
+                                
+                                Age : <?php echo $row['Age'] ?>
+                                
+                            </li>
+                            <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
+                                data-toggle="tooltip" title="3 Bathrooms">
+                                
+                                Weight : <?php echo $row['WeightKG'] ?>
+                                
+                            </li>
+                            <!-- <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
+                                data-toggle="tooltip" title="Size">
+                                <svg class="icon icon-square fs-18 text-primary mr-1">
+                                    <use xlink:href="#icon-square"></use>
+                                </svg>
+                                2300 Sq.Ft
+                            </li> -->
+                            <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
+                                data-toggle="tooltip" title="1 Garage">
+                                <?php echo $row['Availability'] ?>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+
+
+        <?php endwhile; 
+            } else {
+            ?></div>
+
+
+        <h1>
+            <?php echo 'No Data Found '; ?>
+        </h1>
+
+        <?php
+            }
+
+        } ?> 
+        
     </div>
+    </div>
+    
+
+
 </main>
+
+
 
 
 
@@ -344,7 +403,8 @@
                     Suspe ndisse suscipit sagittis </p>
                 <form>
                     <div class="input-group input-group-lg mb-6">
-                        <input type="text" name="email" required="" class="form-control bg-white shadow-none border-0 z-index-1" placeholder="Your email">
+                        <input type="text" name="email" required=""
+                            class="form-control bg-white shadow-none border-0 z-index-1" placeholder="Your email">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="submit">Subscribe</button>
                         </div>
@@ -352,16 +412,20 @@
                 </form>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item mr-0">
-                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
+                                class="fab fa-twitter"></i></a>
                     </li>
                     <li class="list-inline-item mr-0">
-                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
+                                class="fab fa-facebook-f"></i></a>
                     </li>
                     <li class="list-inline-item mr-0">
-                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i class="fab fa-skype"></i></a>
+                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
+                                class="fab fa-skype"></i></a>
                     </li>
                     <li class="list-inline-item mr-0">
-                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </li>
                 </ul>
             </div>
@@ -406,7 +470,7 @@
 <script src="./js/theme.js"></script>
 
 <script>
-    window.setInterval(function() {
+    window.setInterval(function () {
         $('#clock').html(moment().format('lll'))
     }, 1000);
 </script>

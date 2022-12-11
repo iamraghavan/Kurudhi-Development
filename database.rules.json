@@ -1,0 +1,7 @@
+{
+   "rules": {
+       // only authenticated users can read or write to my Firebase
+       ".read": "auth !== null",
+       ".write": "auth !== null"
+   }
+}

@@ -11,6 +11,7 @@
 		
 		if($row > 0){
 			$_SESSION['id']=$fetch['id'];
+			
 			echo "<script>alert('Login Successfully!')</script>";
 			echo "<script>window.location='../dashboard.php'</script>";
 		}else{

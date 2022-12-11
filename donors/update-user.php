@@ -94,7 +94,7 @@ $mysql_data = mysqli_fetch_array($query_data);
                                                     <div class="form-group">
                                                         <label for="first-name-column">Name</label>
                                                         <input oninput="this.value = this.value.toUpperCase()" type="text" id="first-name-column" class="form-control"
-                                                            placeholder="" value="<?php echo $mysql_data['Name']?>" name="fname-column">
+                                                            placeholder="" value="<?php echo $mysql_data['Name']?>" name="fullname">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
@@ -114,20 +114,21 @@ $mysql_data = mysqli_fetch_array($query_data);
                                                     <div class="form-group">
                                                         <label for="city-column">Age</label>
                                                         <input oninput="this.value = this.value.toUpperCase()" type="text" id="city-column" class="form-control"
-                                                            placeholder="" value="<?php echo $mysql_data['Age']?>" name="city-column">
+                                                            placeholder="" value="<?php echo $mysql_data['Age']?>" name="agevalue">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="country-floating">Address</label>
                                                         <input oninput="this.value = this.value.toUpperCase()" type="text" id="country-floating" class="form-control"
-                                                            name="country-floating" value="<?php echo $mysql_data['Address']?>" placeholder="">
+                                                        name="Address" value="<?php echo $mysql_data['Address']?>" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="company-column">Country</label>
-                                                        <input oninput="this.value = this.value.toUpperCase()" name="vCountry" value="<?php echo $mysql_data['Country']?>" class="countries form-control" id="id8">
+                                                        <input oninput="this.value = this.value.toUpperCase()" 
+                                                        name="vCountry" value="<?php echo $mysql_data['Country']?>" class="countries form-control" id="id8">
 
                                             </input>
                                                     </div>
@@ -135,7 +136,8 @@ $mysql_data = mysqli_fetch_array($query_data);
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                     <label for="company-column">State</label>
-                                                        <input oninput="this.value = this.value.toUpperCase()" name="vCountry" value="<?php echo $mysql_data['State']?>" class="states form-control" id="id8">
+                                                        <input oninput="this.value = this.value.toUpperCase()" 
+                                                        name="vState" value="<?php echo $mysql_data['State']?>" class="states form-control" id="id8">
 
                                             </input>
                                                     </div>
@@ -143,7 +145,8 @@ $mysql_data = mysqli_fetch_array($query_data);
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                     <label for="company-column">City </label>
-                                                    <input oninput="this.value = this.value.toUpperCase()" name="vCountry" value="<?php echo $mysql_data['City']?>" class="states form-control" id="id8">
+                                                    <input oninput="this.value = this.value.toUpperCase()" 
+                                                    name="vCity" value="<?php echo $mysql_data['City']?>" class="states form-control" id="id8">
 
                                             </in>
                                                     </div>
@@ -151,83 +154,85 @@ $mysql_data = mysqli_fetch_array($query_data);
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Area</label>
-                                                        <input oninput="this.value = this.value.toUpperCase()" type="email" value="<?php echo $mysql_data['Area']?>" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="">
+                                                        <input oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['Area']?>" id="email-id-column" class="form-control"
+                                                        name="vArea" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="company-column">Postal Code</label>
                                                         <input oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['Pincode']?>" id="company-column" class="form-control"
-                                                            name="company-column" placeholder="">
+                                                        name="vPincode" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Email</label>
                                                         <input  oninput="this.value = this.value.toUpperCase()" type="email" value="<?php echo $mysql_data['Email']?>" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="">
+                                                        name="mailid" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="company-column">Contact Number</label>
                                                         <input oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['ContactNumber']?>" id="company-column" class="form-control"
-                                                            name="company-column" placeholder="">
+                                                        name="cNumber" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Whatsapp Number</label>
-                                                        <input oninput="this.value = this.value.toUpperCase()" type="email" value="<?php echo $mysql_data['WhatsappNumber']?>" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="">
+                                                        <input oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['WhatsappNumber']?>" id="email-id-column" class="form-control"
+                                                        name="wNumber" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="company-column">Blood Group</label>
                                                         <input oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['BloodType']?>" id="company-column" class="form-control"
-                                                            name="company-column" placeholder="">
+                                                        name="bloodGroup" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Donor Availability</label>
-                                                        <input oninput="this.value = this.value.toUpperCase()" type="email" value="<?php echo $mysql_data['Availability']?>" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="">
+                                                        <input oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['Availability']?>" id="email-id-column" class="form-control"
+                                                        name="isAvailable" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Weight (in KG.)</label>
-                                                        <input oninput="this.value = this.value.toUpperCase()" type="email" value="<?php echo $mysql_data['WeightKG']?>" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="">
+                                                        <input oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['WeightKG']?>" id="email-id-column" class="form-control"
+                                                        name="vWeightkg" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Date Of Birth</label>
-                                                        <input  oninput="this.value = this.value.toUpperCase()"type="email" value="<?php echo $mysql_data['DOB']?>" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="">
+                                                        <input  oninput="this.value = this.value.toUpperCase()"type="text" value="<?php echo $mysql_data['DOB']?>" id="fooDate" class="form-control"
+                                                        name="vDob" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Date of Last Blood Donate</label>
-                                                        <input oninput="this.value = this.value.toUpperCase()" type="email" value="<?php echo $mysql_data['DOLBD']?>" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="">
+                                                        <input id="fooDate2" oninput="this.value = this.value.toUpperCase()" type="text" value="<?php echo $mysql_data['DOLBD']?>" class="form-control"
+                                                        name="vDOLBD" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12 d-flex justify-content-end" style="margin: 28px 0px 0px 0px ;">
                                                     <div class="form-group">
                                                         <div class="checkbox d-flex justify-content-end">
                                                             <div style="margin-right:30px; margin-top:8px;">
-                                                            <input type="checkbox" id="checkbox5" class='form-check-input' checked>
+                                                            <input type="checkbox" id="terms_and_conditions" value="1"
+                                                    onclick="terms_changed(this)" name="checkbox">
                                                             <label for="checkbox5">Remember Me</label>
                                                             </div>
                                                             
                                                             <div>
-                                                                <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                                                <button id="submit_button" disabled onclick="check()" type="submit" name="Submit"
+                                            value="Submit" sendMessage() class="btn btn-primary me-1 mb-1">Submit</button>
                                                                 <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                                             </div>
                                                 
@@ -293,7 +298,7 @@ $mysql_data = mysqli_fetch_array($query_data);
                                                 
                                                 <div class="col-12 d-flex justify-content-end">
                                                     <button type="submit"
-                                                        class="btn btn-primary me-1 mb-1">Submit</button>
+                                                        class="btn btn-primary me-1 mb-1" name='Submit'>Submit</button>
                                                     <button type="reset"
                                                         class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                                 </div>
@@ -315,9 +320,119 @@ $mysql_data = mysqli_fetch_array($query_data);
     <script src="./assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+                                        var dateField = document.getElementById("fooDate");
+                                        dateField.onkeyup = bar;
+                                        function bar(evt) {
+                                            var v = this.value;
+                                            if (v.match(/^\d{2}$/) !== null) {
+                                                this.value = v + '/';
+                                            } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                                                this.value = v + '/';
+                                            }
 
+                                        }
+                                        var dateField = document.getElementById("fooDate2");
+                                        dateField.onkeyup = bar;
+                                        function bar(evt) {
+                                            var v = this.value;
+                                            if (v.match(/^\d{2}$/) !== null) {
+                                                this.value = v + '/';
+                                            } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                                                this.value = v + '/';
+                                            }
+
+                                        }
+                                    </script>
+
+                                    <script src="../js/isMain.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://demos.phplift.net/country-state-and-city-dropdown-jquery/js/countrystatecity.js?v3"></script>
 </body>
+
+
+<?php if (isset($_POST['Submit'])) {
+       
+            include './php/config.php';
+            $sql1 =
+                "INSERT INTO tbl_registration (Name, Sex, Age, Email, ContactNumber, WhatsappNumber, Address, Country, State, City, Area, BloodType, Availability, WeightKG, DOB, DOLBD, Pincode)
+    VALUES (
+        '" .
+                $_POST['fullname'] .
+                "'
+        ,'" .
+                $_POST['gender'] .
+                "'
+        ,'" .
+                $_POST['agevalue'] .
+                "'
+        ,'" .
+                $_POST['mailid'] .
+                "'
+        ,'" .
+                $_POST['cNumber'] .
+                "'
+        ,'" .
+                $_POST['wNumber'] .
+                "'
+        ,'" .
+                $_POST['Address'] .
+                "'
+        ,'" .
+                $_POST['vCountry'] .
+                "'
+        ,'" .
+                $_POST['vState'] .
+                "'
+        ,'" .
+                $_POST['vCity'] .
+                "'
+        ,'" .
+                $_POST['vArea'] .
+                "'
+        ,'" .
+                $_POST['bloodGroup'] .
+                "'
+        ,'" .
+                $_POST['isAvailable'] .
+                "'
+        ,'" .
+                $_POST['vWeightkg'] .
+                "'
+        ,'" .
+                $_POST['vDob'] .
+                "'
+        ,'" .
+                $_POST['vDOLBD'] .
+                "'
+        ,'" .
+                $_POST['vPincode'] .
+                "')";
+
+            if ($conn->query($sql1) === true) {
+                echo "
+          <script>
+          sweetAlert({
+                title:'Good job!!',
+                  text: 'Dear! Donar Your Record Will Be Submit By Sucessfully',
+                  type:'success'
+          },function(isConfirm){
+                alert('ok');
+          });
+          $('.swal2-confirm').click(function(){
+                window.location.href = 'index.html';
+          });
+          </script>";
+            } else {
+                echo "<script type= 'text/javascript'>
+            alert('Error: Try Again ');
+        </script>";
+            }
+
+            $conn->close();
+        }
+     else {
+        $_SESSION['form_submit'] = 'NULL';
+    } ?>
 
 </html>
