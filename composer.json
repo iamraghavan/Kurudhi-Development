@@ -1,0 +1,7 @@
+{
+    "require": {
+        "swiftmailer/swiftmailer": "6.0",
+        "mpdf/mpdf": "^6.1",
+        "google/apiclient": "2.12.1"
+    }
+}
